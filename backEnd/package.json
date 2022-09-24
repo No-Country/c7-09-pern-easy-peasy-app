@@ -1,0 +1,31 @@
+{
+  "name": "easy-peasy-app",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "format": "npx prettier --write ."
+  },
+  "dependencies": {
+    "cookie-parser": "1.4.4",
+    "debug": "2.6.9",
+    "express": "4.16.1",
+    "http-errors": "1.6.3",
+    "morgan": "1.9.1",
+    "pg": "8.8.0"
+  },
+  "devDependencies": {
+    "eslint": "8.23.1",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-config-standard": "17.0.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-n": "15.3.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-promise": "6.0.1",
+    "nodemon": "2.0.20",
+    "prettier": "2.7.1"
+  }
+}

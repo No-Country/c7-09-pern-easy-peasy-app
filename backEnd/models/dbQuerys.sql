@@ -2,7 +2,7 @@ CREATE DATABASE easypeasy;
 
 \c easypeasy 
 
-CREATE TABLE user (
+CREATE TABLE client (
   id SERIAL NOT NULL PRIMARY KEY,
   firstName VARCHAR(30) NOT NULL,
   lastName VARCHAR(30) NOT NULL,

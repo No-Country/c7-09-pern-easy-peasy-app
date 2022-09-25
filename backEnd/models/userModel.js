@@ -2,12 +2,13 @@ const pool = require('./../helpers/dbConnect').getInstance()
 
 const newUser = async (payload) => {
   const SQLquery = {
-    text: `INSERT INTO user (firstName, lastName, email, password, updatedate) VALUES ($1, $2, $3, $4, $5)`,
+    text: `INSERT INTO client (firstName, lastName, email, password, createDate, updatedate) VALUES ($1, $2, $3, $4, $5, $6)`,
     values: [
       payload.firstName,
       payload.lastName,
       payload.email,
       payload.password,
+      payload.createDate,
       payload.updateDate,
     ],
   }

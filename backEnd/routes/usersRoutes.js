@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
+const { createUser } = require('../controllers/usersControllers')
 
-/* GET users listing. */
+router.post('/users', createUser)
 
 module.exports = router

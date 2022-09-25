@@ -1,7 +1,5 @@
 const app = require('./src/server')
 
-app.get('/', (res) => {
-  res.send('Hello World!')
-})
+app.use('/', require('./routes/usersRoutes'))
 
 module.exports = app

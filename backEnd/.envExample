@@ -1,1 +1,3 @@
 DATABASE_URL= "URL" # URL to the database 
+EMAIL= "EMAIL" # Email to send the emails from
+EMAIL_PASSWORD= "PASSWORD" # Password for the email

@@ -1,0 +1,58 @@
+{
+  "name": "easypeasyapp",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "backEnd",
+    "frontEnd"
+  ],
+  "engines": {
+    "node": ">=16.17.0",
+    "npm": ">=8.0.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --forceExit",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "format": "npx prettier --write .",
+    "prepare": "husky install",
+    "build": "npm run build --workspaces=frontEnd",
+    "start": "npm run start --workspaces=backEnd",
+    "dev": "npm run dev --workspaces=backEnd,frontEnd"
+  },
+  "husky": {
+  "hooks": {"pre-commit": "lint-staged"}
+},
+  "devDependencies": {
+    "eslint-plugin-jest": "27.0.4",
+    "eslint": "8.24.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-config-standard": "17.0.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-n": "15.3.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-promise": "6.0.1",
+    "eslint-plugin-react": "7.31.8",
+    "prettier": "2.7.1",
+    "husky": "^8.0.0",
+    "jest": "29.0.3",
+    "lint-staged": "^13.0.3",
+    "supertest": "^6.2.4"
+  },
+  "lint-staged": {
+    "*.(js, .test.js)": "npm run lint-fix, npm run format npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/No-Country/c7-09-pern-easy-peasy-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/No-Country/c7-09-pern-easy-peasy-app/issues"
+  },
+  "homepage": "https://github.com/No-Country/c7-09-pern-easy-peasy-app#readme",
+  "description": ""
+}

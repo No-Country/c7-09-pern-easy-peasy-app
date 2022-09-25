@@ -6,13 +6,23 @@ module.exports = {
     'jest/globals': true,
   },
   extends: ['standard', 'eslint:recommended', 'plugin:prettier/recommended'],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
+    sourceType: 'module',
+    commonjs: true,
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   rules: { 'prettier/prettier': 'warn' },
   globals: {
     process: true,
   },
-  plugins: ['jest'],
+  plugins: ['jest', 'supertest'],
 }

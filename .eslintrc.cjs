@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
     node: true,
+    'jest/globals': true,
   },
   extends: [
     'plugin:react/recommended',
@@ -19,11 +20,15 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
+    commonjs: true,
     ecmaFeatures: {
       jsx: true,
     },
   },
-  plugins: ['react'],
+  plugins: ['react', 'jest', 'supertest'],
+  globals: {
+    process: true,
+  },
   rules: {
     'prettier/prettier': 'warn',
     'react/react-in-jsx-scope': 0,

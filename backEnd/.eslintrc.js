@@ -14,5 +14,5 @@ module.exports = {
   globals: {
     process: true,
   },
-  plugins: ['jest'],
+  plugins: ['jest', 'supertest'],
 }

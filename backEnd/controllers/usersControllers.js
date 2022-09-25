@@ -1,4 +1,4 @@
-const { newUser } = require('../models/userModel')
+const { newUser, allUsers } = require('../models/userModel')
 const { showError } = require('../helpers')
 
 exports.createUser = async (req, res) => {
@@ -18,5 +18,16 @@ exports.createUser = async (req, res) => {
       .json({ message: 'Usuario creado con exito', code: 201, payload })
   } catch (e) {
     showError(res, e)
+  }
+}
+exports.getAllUsers = async (req, res) => {
+  try {
+    await allUsers()
+    return res.status(200).json({
+      status: 'success',
+      allUsers,
+    })
+  } catch (e) {
+     showError(res, e)
   }
 }

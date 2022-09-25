@@ -21,6 +21,9 @@
     "start": "npm run start --workspaces=backEnd",
     "dev": "npm run dev --workspaces=backEnd,frontEnd"
   },
+  "husky": {
+  "hooks": {"pre-commit": "lint-staged"}
+},
   "devDependencies": {
     "eslint-plugin-jest": "27.0.4",
     "eslint": "8.24.0",
@@ -38,7 +41,7 @@
     "supertest": "^6.2.4"
   },
   "lint-staged": {
-    "*.(js, .test.js)": "npm run lint-fix"
+    "*.(js, .test.js)": "npm run lint-fix, npm run format npm run test"
   },
   "repository": {
     "type": "git",

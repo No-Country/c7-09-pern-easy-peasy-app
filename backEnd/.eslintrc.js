@@ -3,6 +3,7 @@ module.exports = {
     commonjs: true,
     es2021: true,
     node: true,
+    'jest/globals': true,
   },
   extends: ['standard', 'eslint:recommended', 'plugin:prettier/recommended'],
   overrides: [],
@@ -10,5 +11,8 @@ module.exports = {
     ecmaVersion: 'latest',
   },
   rules: { 'prettier/prettier': 'warn' },
-  globals: { process: true },
+  globals: {
+    process: true,
+  },
+  plugins: ['jest'],
 }

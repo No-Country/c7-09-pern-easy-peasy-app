@@ -1,40 +1,44 @@
+# VS Code Readme Editor 📝
 
-# VS Code Readme Editor 📝  
-Import your existing Readme using the import button on the top right corner of the navbar, 
-or create a new Readme from scratch by typing in the editor.  
+Import your existing Readme using the import button on the top right corner of the navbar,
+or create a new Readme from scratch by typing in the editor.
 
-## Get Started 🚀  
-To get started, hit the 'clear' button at the top of the editor!  
+## Get Started 🚀
 
-## Prebuilt Components/Templates 🔥  
+To get started, hit the 'clear' button at the top of the editor!
+
+## Prebuilt Components/Templates 🔥
+
 You can checkout prebuilt components and templates by clicking on the menu icon
 on the top left corner of the navbar.
-    
-## Save Readme ✨  
+
+## Save Readme ✨
+
 Once you're done, click on the save button to directly save your Readme to your
 project's root directory!
- 
-## Run Locally  
-Clone the project  
 
-~~~bash  
+## Run Locally
+
+Clone the project
+
+```bash
   git clone https://link-to-project
-~~~
+```
 
-Go to the project directory  
+Go to the project directory
 
-~~~bash  
+```bash
   cd my-project
-~~~
+```
 
-Install dependencies  
+Install dependencies
 
-~~~bash  
+```bash
 npm install
-~~~
+```
 
-Start the server  
+Start the server
 
-~~~bash  
+```bash
 npm run start
-~~~  
+```

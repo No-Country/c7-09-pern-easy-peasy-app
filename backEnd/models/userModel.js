@@ -20,4 +20,13 @@ const newUser = async (payload) => {
   }
 }
 
-module.exports = { newUser }
+const allUsers = async () => {
+  try {
+    const result = await pool.query('SELECT * FROM client')
+    return result.row
+  } catch (e) {
+    console.log('error al consultar datos en tabla user: ', e.code, e.message)
+  }
+}
+
+module.exports = { allUsers, newUser }

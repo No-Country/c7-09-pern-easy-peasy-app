@@ -28,6 +28,6 @@ exports.getAllUsers = async (req, res) => {
       allUsers,
     })
   } catch (e) {
-     showError(res, e)
+    showError(res, e)
   }
 }

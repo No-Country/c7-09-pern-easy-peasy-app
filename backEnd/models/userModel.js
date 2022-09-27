@@ -23,7 +23,7 @@ const newUser = async (payload) => {
 const allUsers = async () => {
   try {
     const result = await pool.query('SELECT * FROM client')
-    return result.row
+    return result.rows
   } catch (e) {
     console.log('error al consultar datos en tabla user: ', e.code, e.message)
   }

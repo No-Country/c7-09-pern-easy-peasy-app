@@ -23,7 +23,7 @@ exports.createUser = async (req, res) => {
 exports.getAllUsers = async (req, res) => {
   try {
     await allUsers()
-    return res.status(200).json({
+    res.status(200).json({
       status: 'success',
       allUsers,
     })

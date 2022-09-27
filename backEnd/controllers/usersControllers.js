@@ -29,6 +29,6 @@ exports.getAllUsers = async (req, res) => {
       users,
     })
   } catch (e) {
-     showError(res, e)
+    showError(res, e)
   }
 }

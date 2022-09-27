@@ -1,3 +1,6 @@
-DATABASE_URL= "URL" # URL to the database 
-EMAIL= "EMAIL" # Email to send the emails from
-EMAIL_PASSWORD= "PASSWORD" # Password for the email
+DATABASE_URL= # Your database url
+DATABASE_URL_TEST= # Your test database url
+EMAIL= # Your email address
+PASSWORD= # Your email password
+EMAIL2= # Your second email address
+PASSWORD2= # Your second email PASSWORD2

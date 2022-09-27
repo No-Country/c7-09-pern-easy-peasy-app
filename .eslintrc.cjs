@@ -3,35 +3,35 @@ module.exports = {
     browser: true,
     es2021: true,
     node: true,
-    'jest/globals': true,
+    "jest/globals": true,
   },
   extends: [
-    'plugin:react/recommended',
-    'standard',
-    'eslint:recommended',
-    'plugin:prettier/recommended',
+    "plugin:react/recommended",
+    "standard",
+    "eslint:recommended",
+    "plugin:prettier/recommended",
   ],
   settings: {
     react: {
-      version: 'detect',
+      version: "detect",
     },
   },
   overrides: [],
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+    ecmaVersion: "latest",
+    sourceType: "module",
     commonjs: true,
     ecmaFeatures: {
       jsx: true,
     },
   },
-  plugins: ['react', 'jest', 'supertest'],
+  plugins: ["react", "jest"],
   globals: {
     process: true,
   },
   rules: {
-    'prettier/prettier': 'warn',
-    'react/react-in-jsx-scope': 0,
-    'react/jsx-uses-react': 0,
+    "prettier/prettier": "warn",
+    "react/react-in-jsx-scope": 0,
+    "react/jsx-uses-react": 0,
   },
-}
+};

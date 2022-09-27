@@ -17,16 +17,70 @@ const newUser = async (payload) => {
     return result.rows
   } catch (e) {
     console.log('error al insertar datos en tabla user: ', e.code, e.message)
+    throw new Error(e)
   }
 }
 
 const allUsers = async () => {
+  const SQLquery = {
+    text: `SELECT id, firstName, lastName, email, password, createDate, updateDate FROM client`,
+  }
   try {
-    const result = await pool.query('SELECT * FROM client')
+    const result = await pool.query(SQLquery)
     return result.rows
   } catch (e) {
     console.log('error al consultar datos en tabla user: ', e.code, e.message)
+    throw new Error(e)
   }
 }
 
-module.exports = { allUsers, newUser }
+const updateUser = async (id, payload) => {
+  const SQLquery = {
+    text: `UPDATE client SET firstName = $1, lastName = $2, email = $3, password = $4, updatedate = $5 WHERE id = $6`,
+    values: [
+      payload.firstName,
+      payload.lastName,
+      payload.email,
+      payload.password,
+      payload.updateDate,
+      id,
+    ],
+  }
+  try {
+    const result = await pool.query(SQLquery)
+    return result.rows
+  } catch (e) {
+    console.log('error al actualizar datos en tabla user: ', e.code, e.message)
+    throw new Error(e)
+  }
+}
+
+const showUser = async (id) => {
+  const SQLquery = {
+    text: `SELECT * FROM client WHERE id = $1`,
+    values: [id],
+  }
+  try {
+    const result = await pool.query(SQLquery)
+    return result.rows
+  } catch (e) {
+    console.log('error al consultar datos en tabla user: ', e.code, e.message)
+    throw new Error(e)
+  }
+}
+
+const deleteUser = async (id) => {
+  const SQLquery = {
+    text: `DELETE FROM client WHERE id = $1`,
+    values: [id],
+  }
+  try {
+    const result = await pool.query(SQLquery)
+    return result.rows
+  } catch (e) {
+    console.log('error al eliminar datos en tabla user: ', e.code, e.message)
+    throw new Error(e)
+  }
+}
+
+module.exports = { allUsers, newUser, updateUser, showUser, deleteUser }

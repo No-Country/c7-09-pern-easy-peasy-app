@@ -53,7 +53,11 @@ const updateCourse = async (id, payload) => {
     const result = await pool.query(SQLquery)
     return result.rows
   } catch (e) {
-    console.log('error al actualizar datos en tabla course: ', e.code, e.message)
+    console.log(
+      'error al actualizar datos en tabla course: ',
+      e.code,
+      e.message
+    )
     throw new Error(e)
   }
 }
@@ -86,4 +90,10 @@ const deletecourse = async (id) => {
   }
 }
 
-module.exports = { allCourses, newCourse, updateCourse, showCourse, deletecourse }
+module.exports = {
+  allCourses,
+  newCourse,
+  updateCourse,
+  showCourse,
+  deletecourse,
+}

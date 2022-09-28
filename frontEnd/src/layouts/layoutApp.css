@@ -1,45 +1,45 @@
 #layoutApp {
-	display: grid;
-	width: 100%;
-	height: auto;
-	grid-template-areas:
-		'header header header'
-		'main main main'
-		'footer footer footer';
-	grid-template-columns: auto auto auto;
-	grid-template-rows: auto;
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-areas:
+    'header header header'
+    'main main main'
+    'footer footer footer';
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
 }
 
 #layoutApp header {
-	grid-area: header;
-	color: #fff;
-	z-index: 2;
-	background: transparent;
+  grid-area: header;
+  color: #fff;
+  z-index: 2;
+  background: transparent;
 }
 
 #layoutApp footer {
-	grid-area: footer;
-	color: #fff;
-	z-index: 2;
-	background: transparent;
+  grid-area: footer;
+  color: #fff;
+  z-index: 2;
+  background: transparent;
 }
 
 #layoutApp main {
-	margin: 20px;
-	grid-area: main;
-	color: #fff;
-	z-index: 1;
-	font-size: 10px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  margin: 20px;
+  grid-area: main;
+  color: #fff;
+  z-index: 1;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 aside {
-	grid-area: aside;
-	color: #fff;
-	width: 100%;
-	z-index: 10;
-	background: transparent;
+  grid-area: aside;
+  color: #fff;
+  width: 100%;
+  z-index: 10;
+  background: transparent;
 }

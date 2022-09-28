@@ -2,14 +2,14 @@ const { showError } = require('../helpers')
 const { newCourse, allCourses } = require('../models/coursesModels')
 
 exports.createCourse = async (req, res) => {
-  const { title, description, price, image_url, resurce_url } = req.body
+  const { title, description, price, imageUrl, resurceUrl } = req.body
 
   const payload = {
     title,
     description,
     price,
-    image_url,
-    resurce_url,
+    imageUrl,
+    resurceUrl,
     createDate: new Date(),
     updateDate: new Date(),
   }

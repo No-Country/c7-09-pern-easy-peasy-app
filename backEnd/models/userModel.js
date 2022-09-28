@@ -27,7 +27,7 @@ const allUsers = async () => {
   }
   try {
     const result = await pool.query(SQLquery)
-    return result.row
+    return result.rows
   } catch (e) {
     console.log('error al consultar datos en tabla user: ', e.code, e.message)
     throw new Error(e)

@@ -22,10 +22,11 @@ exports.createUser = async (req, res) => {
 }
 exports.getAllUsers = async (req, res) => {
   try {
-    await allUsers()
+  const users =  await allUsers()
+
     return res.status(200).json({
       status: 'success',
-      allUsers,
+      users,
     })
   } catch (e) {
     showError(res, e)

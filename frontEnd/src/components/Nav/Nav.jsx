@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Link } from 'react-scroll'
 import ModalLogin from '../Modal/ModalLogin'
+//css
+import navStyle from './nav.module.css'
 
 const Nav = () => {
   const [showModal, setShowModal] = useState(false)
@@ -12,42 +14,20 @@ const Nav = () => {
   return (
     <div>
       <img src="" />
-      <Link
-        style={{ cursor: 'pointer' }}
-        to="proyects"
-        smooth={true}
-        offset={0}
-        duration={1000}
-      >
-        Nosotros
-      </Link>
-      <Link
-        style={{ cursor: 'pointer' }}
-        to="proyects"
-        smooth={true}
-        offset={0}
-        duration={1000}
-      >
-        Explorar cursos
-      </Link>
-      <Link
-        style={{ cursor: 'pointer' }}
-        to="proyects"
-        smooth={true}
-        offset={0}
-        duration={1000}
-      >
-        Opiniones
-      </Link>
-      <Link
-        style={{ cursor: 'pointer' }}
-        to="proyects"
-        smooth={true}
-        offset={0}
-        duration={1000}
-      >
-        Proyectos
-      </Link>
+      <div className={navStyle.linkNav}>
+        <Link to="proyects" smooth={true} offset={0} duration={1000}>
+          Nosotros
+        </Link>
+        <Link to="proyects" smooth={true} offset={0} duration={1000}>
+          Explorar cursos
+        </Link>
+        <Link to="proyects" smooth={true} offset={0} duration={1000}>
+          Opiniones
+        </Link>
+        <Link to="proyects" smooth={true} offset={0} duration={1000}>
+          Proyectos
+        </Link>
+      </div>
       <input
         type="search"
         name=""

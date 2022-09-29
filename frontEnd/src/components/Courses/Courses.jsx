@@ -1,14 +1,16 @@
 import { dataCards } from '../../data/data'
+//css
+import courseStyle from './courses.module.css'
 
 const Courses = () => {
   return (
     <div>
       <label htmlFor="select-order">Ordenado por:</label>
       <select name="" id="select-order">
-        <option value="">Recomendados</option>
-        <option value="">Populares</option>
-        <option value="">Fecha de actualización</option>
-        <option value="">Puntuación</option>
+        <option value="rec">Recomendados</option>
+        <option value="pop">Populares</option>
+        <option value="date">Fecha de actualización</option>
+        <option value="punc">Puntuación</option>
       </select>
       {dataCards.length === 0 ? (
         <p>There are no courses</p>

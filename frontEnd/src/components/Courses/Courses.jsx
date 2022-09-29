@@ -1,4 +1,4 @@
-import { dataCards } from '../../data/data';
+import { dataCards } from '../../data/data'
 //css
 import courseStyle from './courses.module.css'
 

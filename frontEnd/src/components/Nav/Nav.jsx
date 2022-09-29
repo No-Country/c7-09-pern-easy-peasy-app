@@ -15,38 +15,18 @@ const Nav = () => {
     <div>
       <img src="" />
       <div className={navStyle.linkNav}>
-          <Link 
-            to="proyects"
-            smooth={true}
-            offset={0}
-            duration={1000}
-          >
-            Nosotros
-          </Link>
-          <Link 
-            to="proyects"
-            smooth={true}
-            offset={0}
-            duration={1000}
-          >
-            Explorar cursos
-          </Link>
-          <Link
-            to="proyects"
-            smooth={true}
-            offset={0}
-            duration={1000}
-          >
-            Opiniones
-          </Link>
-          <Link
-            to="proyects"
-            smooth={true}
-            offset={0}
-            duration={1000}
-          >
-            Proyectos
-          </Link>
+        <Link to="proyects" smooth={true} offset={0} duration={1000}>
+          Nosotros
+        </Link>
+        <Link to="proyects" smooth={true} offset={0} duration={1000}>
+          Explorar cursos
+        </Link>
+        <Link to="proyects" smooth={true} offset={0} duration={1000}>
+          Opiniones
+        </Link>
+        <Link to="proyects" smooth={true} offset={0} duration={1000}>
+          Proyectos
+        </Link>
       </div>
       <input
         type="search"

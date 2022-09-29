@@ -1,7 +1,13 @@
-const { newUser, allUsers } = require('../models/userModel')
+const {
+  newUser,
+  allUsers,
+  updateUser,
+  showUserById,
+  deleteUser,
+} = require('../models/userModel')
 const { showError } = require('../helpers')
 
-exports.createUser = async (req, res) => {
+exports.create = async (req, res) => {
   const { firstName, lastName, email, password } = req.body
   const payload = {
     firstName,
@@ -20,15 +26,58 @@ exports.createUser = async (req, res) => {
     showError(res, e)
   }
 }
-exports.getAllUsers = async (req, res) => {
+exports.showAll = async (req, res) => {
   try {
     const users = await allUsers()
 
+    return res.status(200).json(users)
+  } catch (e) {
+    showError(res, e)
+  }
+}
+
+exports.update = async (req, res) => {
+  const { id } = req.params
+  const { firstName, lastName, email, password } = req.body
+  const payload = {
+    firstName,
+    lastName,
+    email,
+    password,
+    updateDate: new Date(),
+  }
+  try {
+    const result = await updateUser(id, payload)
+    res.status(200).json({ message: 'Usuario actualizado con exito', result })
+  } catch (e) {
+    showError(res, e)
+    console.log(e)
+  }
+}
+
+exports.destroy = async (req, res) => {
+  const { id } = req.params
+  try {
+    await deleteUser(id)
     return res.status(200).json({
-      status: 'success',
-      users,
+      status: 'Usuario eliminado con exito',
     })
   } catch (e) {
     showError(res, e)
+    console.log(e)
+  }
+}
+
+exports.showById = async (req, res) => {
+  const { id } = req.params
+  try {
+    const user = await showUserById(id)
+    return res.status(200).json({
+      status: 'success',
+      user,
+    })
+  } catch (e) {
+    showError(res, e)
+    console.log(e)
   }
 }

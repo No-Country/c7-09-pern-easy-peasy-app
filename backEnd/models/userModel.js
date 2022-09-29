@@ -2,7 +2,7 @@ const pool = require('./../helpers/dbConnect').getInstance()
 
 const newUser = async (payload) => {
   const SQLquery = {
-    text: `INSERT INTO client (firstName, lastName, email, password, createDate, updatedate) VALUES ($1, $2, $3, $4, $5, $6)`,
+    text: `INSERT INTO client (firstname, lastname, email, password, createnate, updatedate) VALUES ($1, $2, $3, $4, $5, $6)`,
     values: [
       payload.firstName,
       payload.lastName,
@@ -23,7 +23,7 @@ const newUser = async (payload) => {
 
 const allUsers = async () => {
   const SQLquery = {
-    text: `SELECT id, firstName, lastName, email, password, createDate, updateDate FROM client`,
+    text: `SELECT id, firstname, lastname, email, password, createdate, updatedate FROM client ORDER BY id ASC `,
   }
   try {
     const result = await pool.query(SQLquery)
@@ -36,7 +36,7 @@ const allUsers = async () => {
 
 const updateUser = async (id, payload) => {
   const SQLquery = {
-    text: `UPDATE client SET firstName = $1, lastName = $2, email = $3, password = $4, updatedate = $5 WHERE id = $6`,
+    text: `UPDATE client SET firstname = $1, lastname = $2, email = $3, password = $4, updatedate = $5 WHERE id = $6 RETURNING *`,
     values: [
       payload.firstName,
       payload.lastName,
@@ -55,9 +55,9 @@ const updateUser = async (id, payload) => {
   }
 }
 
-const showUser = async (id) => {
+const showUserById = async (id) => {
   const SQLquery = {
-    text: `SELECT * FROM client WHERE id = $1`,
+    text: `SELECT id, firstname, lastname, email, password, createdate, updatedate FROM client WHERE id = $1`,
     values: [id],
   }
   try {
@@ -83,4 +83,4 @@ const deleteUser = async (id) => {
   }
 }
 
-module.exports = { allUsers, newUser, updateUser, showUser, deleteUser }
+module.exports = { allUsers, newUser, updateUser, showUserById, deleteUser }

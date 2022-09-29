@@ -83,4 +83,25 @@ const deleteUser = async (id) => {
   }
 }
 
-module.exports = { allUsers, newUser, updateUser, showUserById, deleteUser }
+const getUserByEmail = async (email) => {
+  const SQLquery = {
+    text: `SELECT id, firstname, lastname, email, password, createdate, updatedate FROM client WHERE email = $1`,
+    values: [email],
+  }
+  try {
+    const result = await pool.query(SQLquery)
+    return result.rows
+  } catch (e) {
+    console.log('error al consultar datos en tabla user: ', e.code, e.message)
+    throw new Error(e)
+  }
+}
+
+module.exports = {
+  allUsers,
+  newUser,
+  updateUser,
+  showUserById,
+  deleteUser,
+  getUserByEmail,
+}

@@ -1,16 +1,16 @@
 import { LayoutApp } from './layouts/LayoutApp'
 import { RoutesApp } from './routes/RoutesApp'
 
-//redux
+// redux
 import { Provider } from 'react-redux'
 import { store } from './Store'
 
 function App() {
   return (
     <Provider store={store}>
-    <LayoutApp>
-      <RoutesApp />
-    </LayoutApp>
+      <LayoutApp>
+        <RoutesApp />
+      </LayoutApp>
     </Provider>
   )
 }

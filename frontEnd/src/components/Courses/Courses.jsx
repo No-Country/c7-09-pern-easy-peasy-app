@@ -1,6 +1,6 @@
 import { dataCards } from '../../data/data'
-//css
-import courseStyle from './courses.module.css'
+// css
+// import courseStyle from './courses.module.css'
 
 const Courses = () => {
   return (

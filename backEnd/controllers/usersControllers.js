@@ -1,3 +1,5 @@
+const bcrypt = require('bcryptjs')
+
 const {
   newUser,
   allUsers,
@@ -9,16 +11,21 @@ const { showError } = require('../helpers')
 
 exports.create = async (req, res) => {
   const { firstName, lastName, email, password } = req.body
+  const salt = await bcrypt.genSalt(12)
+  const hashPassword = await bcrypt.hash(password, salt)
+
   const payload = {
     firstName,
     lastName,
     email,
-    password,
+    password: hashPassword,
     createDate: new Date(),
     updateDate: new Date(),
   }
+
   try {
     await newUser(payload)
+    payload.password = undefined
     res
       .status(200)
       .json({ message: 'Usuario creado con exito', code: 201, payload })

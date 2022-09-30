@@ -3,7 +3,7 @@ import { RoutesApp } from './routes/RoutesApp'
 
 // redux
 import { Provider } from 'react-redux'
-import store from './Store'
+import store from './store'
 
 function App() {
   return (

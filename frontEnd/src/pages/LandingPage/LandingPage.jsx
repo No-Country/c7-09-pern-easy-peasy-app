@@ -3,8 +3,8 @@ import Courses from '../../components/Courses/Courses'
 import Routes from '../../components/NavCourses/NavCourses'
 import { images } from './../../assets'
 import ModalLogin from '../../components/Modal/ModalLogin'
-//css
-import ladingStyle from './landingPage.module.css'
+// css
+import './landingPage.module.css'
 
 const LandingPage = () => {
   const [selected, setSelected] = useState('courses')

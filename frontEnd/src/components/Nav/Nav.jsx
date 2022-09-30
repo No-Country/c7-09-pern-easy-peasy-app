@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-scroll'
 import ModalLogin from '../Modal/ModalLogin'
-//css
+// css
 import navStyle from './nav.module.css'
 
 const Nav = () => {

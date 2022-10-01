@@ -15,13 +15,7 @@ exports.create = async (req, res) => {
   const completeName = `${firstName} ${lastName}`
   const salt = await bcrypt.genSalt(12)
   const hashPassword = await bcrypt.hash(password, salt)
-<<<<<<< HEAD
-  const completeName = `${firstName} ${lastName}`
-=======
-  const salt = await bcrypt.genSalt(12)
-  const hashPassword = await bcrypt.hash(password, salt)
 
->>>>>>> 8be21cb37dccf2c5d18acbf6c76d963f510cb343
   const payload = {
     firstName,
     lastName,
@@ -35,11 +29,7 @@ exports.create = async (req, res) => {
     await newUser(payload)
     await sendEmail(email, completeName)
     payload.password = undefined
-<<<<<<< HEAD
-    await sendEmail(email, completeName)
-=======
-    payload.password = undefined
->>>>>>> 8be21cb37dccf2c5d18acbf6c76d963f510cb343
+
     res
       .status(200)
       .json({ message: 'Usuario creado con exito', code: 201, payload })

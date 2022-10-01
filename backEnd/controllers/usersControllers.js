@@ -6,9 +6,11 @@ const {
   deleteUser,
 } = require('../models/userModel')
 const { showError } = require('../helpers')
+const { sendEmail } = require('../helpers/sendEmail')
 
 exports.create = async (req, res) => {
   const { firstName, lastName, email, password } = req.body
+  const completeName = `${firstName} ${lastName}`
   const payload = {
     firstName,
     lastName,
@@ -19,6 +21,7 @@ exports.create = async (req, res) => {
   }
   try {
     await newUser(payload)
+    await sendEmail(email, completeName)
     res
       .status(200)
       .json({ message: 'Usuario creado con exito', code: 201, payload })

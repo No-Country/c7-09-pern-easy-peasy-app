@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "nodemon node app.js"
+    "dev": "nodemon node app.js",
+    "test-W": "jest --watch"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

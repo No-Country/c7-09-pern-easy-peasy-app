@@ -1,9 +1,9 @@
-const request = require('supertest')
-const app = require('../app')
+// const request = require('supertest')
+// const app = require('../app')
 
-app.get('/users', async (req, res) => {
-  res.status(200).json({ name: 'john' })
-})
+// app.get('/users', async (req, res) => {
+//   res.status(200).json({ name: 'john' })
+// })
 
 // describe('GET /users', () => {
 //   it('respond with json', (done) => {

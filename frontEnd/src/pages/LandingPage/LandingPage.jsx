@@ -15,7 +15,7 @@ const LandingPage = () => {
   }
 
   const handlerModalLogin = (e) => {
-    if(!e.target.className.includes('modal')) return;
+    if (!e.target.className.includes('modal')) return
     setShowModal(!showModal)
   }
 
@@ -23,68 +23,102 @@ const LandingPage = () => {
     <>
       {showModal && (
         <ModalLogin handlerModalLogin={handlerModalLogin}>
-          <div className='relative w-4/5 gap-2.5 flex z-40 bg-white h-[95%] overflow-auto p-[10px]'>
-            <div className='basis-1/2'>
+          <div className="relative w-4/5 gap-2.5 flex z-40 bg-white h-[95%] overflow-auto p-[10px]">
+            <div className="basis-1/2">
               <img src="" alt="" />
             </div>
-            <div className='basis-1/2 flex flex-col  gap-y-[20px]'>
+            <div className="basis-1/2 flex flex-col  gap-y-[20px]">
               <div>
-                <img className='ml-auto mr-auto w-[312px] h-[88px] bg-[#878787] rounded-[20px]' src="" alt="Imagen?" />
+                <img
+                  className="ml-auto mr-auto w-[312px] h-[88px] bg-[#878787] rounded-[20px]"
+                  src=""
+                  alt="Imagen?"
+                />
               </div>
-              <p className='text-center'>
+              <p className="text-center">
                 APRENDE CON LOS MEJORES PROFESIONALES Y FORMA PARTE DE LA MEJOR
                 COMUNIDAD
               </p>
               <input
                 type="email"
-                className='w-full p-[8px] rounded-[10px] border border-black border-solid'
+                className="w-full p-[8px] rounded-[10px] border border-black border-solid"
                 placeholder="Correo electronico"
               />
               <input
                 type="password"
-                className='w-full p-[8px] rounded-[10px] border border-black border-solid'
+                className="w-full p-[8px] rounded-[10px] border border-black border-solid"
                 name=""
                 placeholder="Contraseña"
               />
               <input
                 type="password"
-                className='w-full p-[8px] rounded-[10px] border border-black border-solid'
+                className="w-full p-[8px] rounded-[10px] border border-black border-solid"
                 name=""
                 placeholder="Repetir tu contraseña"
               />
-              <label>Indicanos tu fecha de nacimiento <input className='p-[8px] rounded-[10px] border border-black border-solid' type="date" name="" id="" />
-              </label>
-              <label className='block'>
+              <label>
+                Indicanos tu fecha de nacimiento{' '}
                 <input
-                  type="checkbox"
-                  name="" id="" 
-                  />
-                Acepta los <span className='underline font-bold'>términos y condiciones</span> de EZ
+                  className="p-[8px] rounded-[10px] border border-black border-solid"
+                  type="date"
+                  name=""
+                  id=""
+                />
               </label>
-              <button className='bg-[#5f5d5d] rounded-[30px] p-[10px] text-white'>Crear cuenta</button>
+              <label className="block">
+                <input type="checkbox" name="" id="" />
+                Acepta los{' '}
+                <span className="underline font-bold">
+                  términos y condiciones
+                </span>{' '}
+                de EZ
+              </label>
+              <button className="bg-[#5f5d5d] rounded-[30px] p-[10px] text-white">
+                Crear cuenta
+              </button>
               <p>
-                ¿Ya tienes una cuenta? <button className='font-bold'>Inicia sesión</button>
+                ¿Ya tienes una cuenta?{' '}
+                <button className="font-bold">Inicia sesión</button>
               </p>
             </div>
-            <button className='modal absolute top-2 right-2' onClick={handlerModalLogin}>X</button>
+            <button
+              className="modal absolute top-2 right-2"
+              onClick={handlerModalLogin}
+            >
+              X
+            </button>
           </div>
         </ModalLogin>
       )}
 
-      <div className='flex'>
-        <div className='basis-3/4'>
-          <p className='text-[4.5em]  leading-[72px]'> <span className='font-bold italic'>EZ </span>es una plataforma que hace que aprender sea <span className='font-bold italic'>Easy Peasy</span></p>
-          <div className='text-[18px] font-light leading-[38px]'>
+      <div className="flex">
+        <div className="basis-3/4">
+          <p className="text-[4.5em]  leading-[72px]">
+            {' '}
+            <span className="font-bold italic">EZ </span>es una plataforma que
+            hace que aprender sea{' '}
+            <span className="font-bold italic">Easy Peasy</span>
+          </p>
+          <div className="text-[18px] font-light leading-[38px]">
             <p>Aprende a tu ritmo cuando quieras y donde quieras</p>
             <p>
               HTML, CSS, JavaScript, Python, React, Go, Android, Flutter y mucho
               más.
             </p>
-            <button className='modal text-white mt-[50px] rounded-[20px] bg-[#262626] w-[258px] h-[52px]' onClick={handlerModalLogin}>¡Registrate gratis!</button>
+            <button
+              className="modal text-white mt-[50px] rounded-[20px] bg-[#262626] w-[258px] h-[52px]"
+              onClick={handlerModalLogin}
+            >
+              ¡Registrate gratis!
+            </button>
           </div>
         </div>
-        <div className='rounded-[100%]'>
-          <img className='rounded-[100%]' src={images.handCoding} alt="hand-coding" />
+        <div className="rounded-[100%]">
+          <img
+            className="rounded-[100%]"
+            src={images.handCoding}
+            alt="hand-coding"
+          />
         </div>
       </div>
 

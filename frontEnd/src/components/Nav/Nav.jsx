@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { Link } from 'react-scroll';
-import ModalLogin from '../Modal/ModalLogin';
+import { useState } from 'react'
+import { Link } from 'react-scroll'
+import ModalLogin from '../Modal/ModalLogin'
 // css
 import emptyCardImg from '../../assets/empty-Card.png'
 
@@ -65,13 +65,13 @@ const Nav = () => {
         >
           Proyectos
         </Link>
-        </div>
-        <input
-          type="search"
-          name=""
-          class="bg-white hover:bg-gray-100 w-1/6 elementsm:w-3/4 md:w-20 lg:w-2 xl:w-1/4 text-gray-500 font-bold-light text-lg- italic py-2 px-4  shadow-md border border-gray-300 rounded-full"
-          placeholder="HTML, CSS, JavaScript..."
-        />
+      </div>
+      <input
+        type="search"
+        name=""
+        class="bg-white hover:bg-gray-100 w-1/6 elementsm:w-3/4 md:w-20 lg:w-2 xl:w-1/4 text-gray-500 font-bold-light text-lg- italic py-2 px-4  shadow-md border border-gray-300 rounded-full"
+        placeholder="HTML, CSS, JavaScript..."
+      />
       <img
         className="w-25px inline-flex"
         src={emptyCardImg}

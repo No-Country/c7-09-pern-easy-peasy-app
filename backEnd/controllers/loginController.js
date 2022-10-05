@@ -1,3 +1,4 @@
+const bcrypt = require('bcryptjs')
 const { showError } = require('../helpers')
 const { getUserByEmail } = require('../models/userModel')
 
@@ -12,10 +13,9 @@ exports.login = async (req, res) => {
         code: 404,
       })
     } else {
-      const isvalidPassword = () => {
-        return password === user[0].password
-      }
-      if (!isvalidPassword()) {
+      const isPasswordValid = await bcrypt.compare(password, user[0].password)
+
+      if (!isPasswordValid) {
         res.status(401).json({
           message: 'Contraseña incorrecta',
           code: 401,

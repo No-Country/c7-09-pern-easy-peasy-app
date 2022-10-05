@@ -5,7 +5,6 @@ import { images } from './../../assets'
 import ModalLogin from '../../components/Modal/ModalLogin'
 // css
 
-
 const LandingPage = () => {
   const [selected, setSelected] = useState('courses')
   const [showModal, setShowModal] = useState(false)
@@ -121,11 +120,13 @@ const LandingPage = () => {
           />
         </div>
       </div>
-      <div class='leading-[37px] sm:text-center md:text-right lg:text-justify xl:text-center'>
-        <h2 class="font-bold text-[3em] text-left">
+      <div className="leading-[37px] sm:text-center md:text-right lg:text-justify xl:text-center">
+        <h2 className="font-bold text-[3em] text-left">
           Sabemos que tú decides a dónde quieres llegar
         </h2>
-        <h3 class="text-[2em] text-left">Por eso en EZ tú puedes personalizar tu ruta de aprendizaje</h3>
+        <h3 className="text-[2em] text-left">
+          Por eso en EZ tú puedes personalizar tu ruta de aprendizaje
+        </h3>
       </div>
       <button name="courses" onClick={handlerClick}>
         Cursos

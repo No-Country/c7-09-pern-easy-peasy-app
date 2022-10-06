@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "nodemon node app.js",
-    "test-W": "jest --watch"
+    "test-W": "jest --watch",
+    "start": "node app.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -19,5 +20,8 @@
   },
   "devDependencies": {
     "nodemon": "2.0.20"
+  },
+  "engines": {
+    "node": ">=16"
   }
 }

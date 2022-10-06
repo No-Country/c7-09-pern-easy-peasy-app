@@ -1,5 +1,5 @@
-const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken')
 const { showError } = require('../helpers')
 const { getUserByEmail } = require('../models/userModel')
 const dotenv = require('dotenv')
@@ -17,10 +17,9 @@ exports.login = async (req, res) => {
         code: 404,
       })
     } else {
-      const isvalidPassword = async () => {
-        return await bcrypt.compare(password, user[0].password)
-      }
-      if (!isvalidPassword()) {
+      const isPasswordValid = await bcrypt.compare(password, user[0].password)
+
+      if (!isPasswordValid) {
         res.status(401).json({
           message: 'Contraseña incorrecta',
           code: 401,

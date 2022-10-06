@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-scroll'
 import ModalLogin from '../Modal/ModalLogin'
 // css
-import navStyle from './nav.module.css'
+import emptyCardImg from '../../assets/empty-Card.png'
 
 const Nav = () => {
   const [showModal, setShowModal] = useState(false)
@@ -72,7 +72,11 @@ const Nav = () => {
         class="bg-white hover:bg-gray-100 w-1/6 elementsm:w-3/4 md:w-20 lg:w-2 xl:w-1/4 text-gray-500 font-bold-light text-lg- italic py-2 px-4  shadow-md border border-gray-300 rounded-full"
         placeholder="HTML, CSS, JavaScript..."
       />
-      <img src="" alt="" />
+      <img
+        className="w-25px inline-flex"
+        src={emptyCardImg}
+        alt="emptyCardImg"
+      />
       <button
         class="bg-white hover:bg-gray-100 text-gray-800 font-ligth text-sm  xl:w-1/7 py-2 px-4 shadow-md border border-gray-300 rounded-full"
         onClick={handlerModalLogin}

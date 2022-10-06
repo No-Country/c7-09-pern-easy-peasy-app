@@ -4,7 +4,6 @@ import Routes from '../../components/NavCourses/NavCourses'
 import { images } from './../../assets'
 import ModalLogin from '../../components/Modal/ModalLogin'
 // css
-import './landingPage.module.css'
 
 const LandingPage = () => {
   const [selected, setSelected] = useState('courses')
@@ -121,10 +120,14 @@ const LandingPage = () => {
           />
         </div>
       </div>
-
-      <h2>Sabemos que tú decides a dónde quieres llegar</h2>
-      <p>Por eso en EZ tú puedes personalizar tu ruta de aprendizaje</p>
-
+      <div className="leading-[37px] sm:text-center md:text-right lg:text-justify xl:text-center">
+        <h2 className="font-bold text-[3em] text-left">
+          Sabemos que tú decides a dónde quieres llegar
+        </h2>
+        <h3 className="text-[2em] text-left">
+          Por eso en EZ tú puedes personalizar tu ruta de aprendizaje
+        </h3>
+      </div>
       <button name="courses" onClick={handlerClick}>
         Cursos
       </button>
@@ -184,7 +187,7 @@ const LandingPage = () => {
             Proponemos una educación accesible y de calidad. Creemos que
             respetar los tiempos y el ritmo de aprendizaje de cada persona es la
             clave para formar no solo excelentes profesionales sino colegas
-            empaticos
+            empáticos
           </blockquote>
           <address>
             <h6>Zed Ramos</h6>

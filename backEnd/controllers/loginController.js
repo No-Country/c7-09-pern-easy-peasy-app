@@ -1,5 +1,10 @@
+const jwt = require('jsonwebtoken')
+const bcrypt = require('bcryptjs')
 const { showError } = require('../helpers')
 const { getUserByEmail } = require('../models/userModel')
+const dotenv = require('dotenv')
+
+dotenv.config({ path: './.env' })
 
 exports.login = async (req, res) => {
   const { email, password } = req.body
@@ -12,8 +17,8 @@ exports.login = async (req, res) => {
         code: 404,
       })
     } else {
-      const isvalidPassword = () => {
-        return password === user[0].password
+      const isvalidPassword = async () => {
+        return await bcrypt.compare(password, user[0].password)
       }
       if (!isvalidPassword()) {
         res.status(401).json({
@@ -21,8 +26,18 @@ exports.login = async (req, res) => {
           code: 401,
         })
       } else {
-        res.status(200).json({
+        // generate JWT
+        const token = await jwt.sign(
+          { id: user.id, name: user.name },
+          process.env.JWT_SIGN,
+          {
+            expiresIn: '30d',
+          }
+        )
+
+        return res.status(200).json({
           message: 'Usuario autenticado con exito',
+          token,
           code: 200,
         })
       }

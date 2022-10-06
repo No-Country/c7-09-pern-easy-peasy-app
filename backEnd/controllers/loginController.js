@@ -2,9 +2,6 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const { showError } = require('../helpers')
 const { getUserByEmail } = require('../models/userModel')
-const dotenv = require('dotenv')
-
-dotenv.config({ path: './.env' })
 
 exports.login = async (req, res) => {
   const { email, password } = req.body
@@ -26,11 +23,12 @@ exports.login = async (req, res) => {
         })
       } else {
         // generate JWT
+        console.log(user)
         const token = await jwt.sign(
-          { id: user.id, name: user.name },
+          { id: user[0].id, name: user[0].firstname },
           process.env.JWT_SIGN,
           {
-            expiresIn: '30d',
+            expiresIn: '24h',
           }
         )
 

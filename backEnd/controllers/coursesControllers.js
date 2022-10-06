@@ -31,7 +31,6 @@ exports.create = async (req, res) => {
 }
 exports.showAll = async (req, res) => {
   try {
-
     const courses = await allCourses()
 
     return res.status(200).json(courses)

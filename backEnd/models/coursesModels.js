@@ -1,6 +1,5 @@
 const pool = require('./../helpers/dbConnect').getInstance()
 
-
 const newCourse = async (payload) => {
   const SQLquery = {
     text: `INSERT INTO course (title, description, price, image_url, resurce_url, createdate, updatedate) VALUES ($1, $2, $3, $4, $5, $6,$7)`,

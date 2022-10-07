@@ -54,5 +54,8 @@
     "url": "https://github.com/No-Country/c7-09-pern-easy-peasy-app/issues"
   },
   "homepage": "https://github.com/No-Country/c7-09-pern-easy-peasy-app#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1"
+  }
 }

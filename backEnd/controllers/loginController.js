@@ -1,3 +1,5 @@
+const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken')
 const { showError } = require('../helpers')
 const { getUserByEmail } = require('../models/userModel')
 
@@ -12,17 +14,27 @@ exports.login = async (req, res) => {
         code: 404,
       })
     } else {
-      const isvalidPassword = () => {
-        return password === user[0].password
-      }
-      if (!isvalidPassword()) {
+      const isPasswordValid = await bcrypt.compare(password, user[0].password)
+
+      if (!isPasswordValid) {
         res.status(401).json({
           message: 'Contraseña incorrecta',
           code: 401,
         })
       } else {
-        res.status(200).json({
+        // generate JWT
+        console.log(user)
+        const token = await jwt.sign(
+          { id: user[0].id, name: user[0].firstname },
+          process.env.JWT_SIGN,
+          {
+            expiresIn: '24h',
+          }
+        )
+
+        return res.status(200).json({
           message: 'Usuario autenticado con exito',
+          token,
           code: 200,
         })
       }

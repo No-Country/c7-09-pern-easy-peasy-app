@@ -9,7 +9,6 @@ import userJanna from '../../assets/userJanna.jpg'
 import userThresh from '../../assets/userThresh.jpg'
 import userNasus from '../../assets/userNasus.jpg'
 // css
-import './landingPage.module.css'
 
 const LandingPage = () => {
   const [selected, setSelected] = useState('courses')
@@ -114,10 +113,14 @@ const LandingPage = () => {
         </div>
         <div className="w-[100%] md:w-[456px] h-[456px]  rounded-[149px 136px 144px 137px] bg-handcoding bg-center bg-contain bg-no-repeat"></div>
       </div>
-
-      <h2>Sabemos que tú decides a dónde quieres llegar</h2>
-      <p>Por eso en EZ tú puedes personalizar tu ruta de aprendizaje</p>
-
+      <div className="leading-[37px] sm:text-center md:text-right lg:text-justify xl:text-center">
+        <h2 className="font-bold text-[3em] text-left">
+          Sabemos que tú decides a dónde quieres llegar
+        </h2>
+        <h3 className="text-[2em] text-left">
+          Por eso en EZ tú puedes personalizar tu ruta de aprendizaje
+        </h3>
+      </div>
       <button name="courses" onClick={handlerClick}>
         Cursos
       </button>

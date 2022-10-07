@@ -2,7 +2,8 @@ import { useState } from 'react'
 import { Link } from 'react-scroll'
 import ModalLogin from '../Modal/ModalLogin'
 // css
-import emptyCardImg from '../../assets/empty-Card.png'
+import shoppingCart from '../../assets/shoppingCart.svg'
+import iconoWeb from '../../assets/iconoWeb.svg'
 
 const Nav = () => {
   const [showModal, setShowModal] = useState(false)
@@ -13,22 +14,13 @@ const Nav = () => {
   }
 
   return (
-    <div class="flex justify-around flex-wrap space-x-20 items-center shadow-lg bg-gray-300 p-3">
-      <svg
-        class="fill-current h-8 w-8 mr-2"
-        width="54"
-        height="54"
-        viewBox="0 0 54 54"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
-      </svg>
-      {/* <img src="xxxx" /> */}
-      <div class="font-bold-light text-lg space-x-10 tracking-normal">
+    <div className="flex justify-around flex-wrap space-x-20 items-center shadow-md bg-white p-3">
+      <img src={iconoWeb} class="mr-1 h-10 sm:h-9" alt="EZ Logo" />
+      <div className="font-bold-light text-lg space-x-10 tracking-normal">
         <Link
           to="proyects"
           href="#responsive-header"
-          class="cursor-pointer block mt-6 lg:inline-block lg:mt-0 text-gray-900 hover:text-white mr-6"
+          className="cursor-pointer block mt-6 lg:inline-block lg:mt-0 text-gray-900 hover:text-white mr-6"
           smooth={true}
           offset={0}
           duration={1000}
@@ -38,7 +30,7 @@ const Nav = () => {
         <Link
           to="proyects"
           href="#responsive-header"
-          class="cursor-pointer block mt-6 lg:inline-block lg:mt-0 text-gray-900 hover:text-white mr-6"
+          className="cursor-pointer block mt-6 lg:inline-block lg:mt-0 text-gray-900 hover:text-white mr-6"
           smooth={true}
           offset={0}
           duration={1000}
@@ -48,7 +40,7 @@ const Nav = () => {
         <Link
           to="proyects"
           href="#responsive-header"
-          class="cursor-pointer block mt-6 lg:inline-block lg:mt-0 text-gray-900 hover:text-white mr-6"
+          className="cursor-pointer block mt-6 lg:inline-block lg:mt-0 text-gray-900 hover:text-white mr-6"
           smooth={true}
           offset={0}
           duration={1000}
@@ -58,7 +50,7 @@ const Nav = () => {
         <Link
           to="proyects"
           href="#responsive-header"
-          class="cursor-pointer block mt-6 lg:inline-block lg:mt-0 text-gray-900 hover:text-white"
+          className="cursor-pointer block mt-6 lg:inline-block lg:mt-0 text-gray-900 hover:text-white"
           smooth={true}
           offset={0}
           duration={1000}
@@ -66,15 +58,20 @@ const Nav = () => {
           Proyectos
         </Link>
       </div>
-      <input
+      <div className='relative w-90%' >
+        <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+            <svg aria-hidden="true" className="w-5 h-5 text-primary dark:text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+        </div>
+        <input
         type="search"
         name=""
-        class="bg-white hover:bg-gray-100 w-1/6 elementsm:w-3/4 md:w-20 lg:w-2 xl:w-1/4 text-gray-500 font-bold-light text-lg- italic py-2 px-4  shadow-md border border-gray-300 rounded-full"
+        className="bg-white hover:bg-gray-100 text-primary font-ligth text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-white dark:border-gray-600 dark:placeholder-primary dark:text-gray-800 dark:focus:ring-blue-500 shadow-md dark:focus:border-blue-500 rounded-full"
         placeholder="HTML, CSS, JavaScript..."
       />
+      </div>
       <img
-        className="w-25px inline-flex"
-        src={emptyCardImg}
+        className="w-25px inline-flex fill-primary"
+        src={shoppingCart}
         alt="emptyCardImg"
       />
       <button

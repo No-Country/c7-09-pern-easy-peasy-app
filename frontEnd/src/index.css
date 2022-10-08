@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .cut-image {
+    clip-path: inset(329px 232px);
+  }
+}
+
 html {
   font-family: 'Poppins', 'Times New Roman', Times, serif;
 }

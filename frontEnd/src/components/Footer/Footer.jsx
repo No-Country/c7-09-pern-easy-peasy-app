@@ -1,13 +1,13 @@
-import linkedinImg from '../../assets/linkedin.png'
+import linkedinImg from '../../assets/linkedin.svg'
 
 const Footer = () => {
   return (
-    <footer className="flex flex-wrap gap-y-8 gap-x-[100%] md:gap-x-[0] justify-evenly text-black bg-[#d9d9d9] py-5">
+    <footer className="flex flex-wrap gap-y-8 gap-x-[100%] md:gap-x-[0] justify-evenly bg-primary py-5">
       <div className="w-[198px] h-[55px] rounded-3xl bg-[#878787]">
         <img src="" alt="" />
       </div>
-      <div className="text-black text-sm">
-        <h3 className="mb-[19px] text-center text-base">DESARROLLADORES</h3>
+      <div className="text-white text-sm basis-[180px]">
+        <h3 className="mb-[19px] text-base">DESARROLLADORES</h3>
         <ul className="flex flex-col gap-[15px]">
           <li>
             <a href="" target="_blank">
@@ -98,8 +98,8 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="text-black text-sm">
-        <h3 className="mb-[19px] text-center text-base">DISEÑADORA</h3>
+      <div className="text-white text-sm basis-[180px]">
+        <h3 className="mb-[19px] text-base">DISEÑADORA</h3>
         <ul className="flex flex-col gap-[15px]">
           <li>
             <a href="" target="_blank">
@@ -113,11 +113,22 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="text-black text-sm">
-        <h3 className="mb-[19px] text-center text-base">EXPLORA</h3>
-        <span>Ingresar a la plataforma</span>
+      <div className="text-white text-sm basis-[180px]">
+        <h3 className="mb-[19px] text-base">TEAM LEADER</h3>
+        <ul className="flex flex-col gap-[15px]">
+          <li>
+            <a href="" target="_blank">
+              <img
+                className="inline w-[24px]"
+                src={linkedinImg}
+                alt="linkedin icono"
+              />
+              &nbsp;Matias Torres
+            </a>
+          </li>
+        </ul>
       </div>
-      <div className="basis-full text-center text-black text-xs">
+      <div className="basis-full text-center text-white text-xs">
         <p>REALIZADO PARA FASE 1 DEL COHORTE 7 - NO COUNTRY TECH</p>
       </div>
     </footer>

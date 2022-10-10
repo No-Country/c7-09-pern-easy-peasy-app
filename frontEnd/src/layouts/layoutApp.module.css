@@ -24,7 +24,7 @@
 }
 
 .layoutApp main {
-  margin: 20px;
+  /* margin: 20px; */
   grid-area: main;
   color: #000;
   z-index: 1;

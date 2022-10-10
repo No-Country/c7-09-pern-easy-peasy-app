@@ -17,6 +17,7 @@ module.exports = {
       backgroundImage: {
         handcoding: 'url("./src/assets/portadaEZ.gif")',
         'logotipo-ez': 'url("./src/assets/logotipoEZ.svg")',
+        'logotipo-ez-footer': 'url("./src/assets/logotipoFooter.svg")',
         'login-image': 'url("./src/assets/inicioSesioIlusstracion.svg")',
         'register-image': 'url("./src/assets/registroIlustracion.svg")',
         'icon-close': 'url("./src/assets/iconClose.svg")',

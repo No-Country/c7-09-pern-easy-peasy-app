@@ -3,9 +3,7 @@ import linkedinImg from '../../assets/linkedin.svg'
 const Footer = () => {
   return (
     <footer className="flex flex-wrap gap-y-8 gap-x-[100%] md:gap-x-[0] justify-evenly bg-primary py-5">
-      <div className="w-[198px] h-[55px] rounded-3xl bg-[#878787]">
-        <img src="" alt="" />
-      </div>
+      <div className="w-[198px] h-[55px] rounded-3xl bg-logotipo-ez-footer bg-no-repeat bg-center bg-cover"></div>
       <div className="text-white text-sm basis-[180px]">
         <h3 className="mb-[19px] text-base">DESARROLLADORES</h3>
         <ul className="flex flex-col gap-[15px]">

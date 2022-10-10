@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { motion } from 'framer-motion'
 import Courses from '../../components/Courses/Courses'
 import Routes from '../../components/NavCourses/NavCourses'
 import { images } from './../../assets'
@@ -8,6 +9,8 @@ import userGaren from '../../assets/userGaren.jpg'
 import userJanna from '../../assets/userJanna.jpg'
 import userThresh from '../../assets/userThresh.jpg'
 import userNasus from '../../assets/userNasus.jpg'
+import cursoImage from '../../assets/curso-no-available.svg'
+import Slider from '../../components/Slider/Slider'
 // css
 
 const LandingPage = () => {
@@ -89,7 +92,7 @@ const LandingPage = () => {
         </ModalLogin>
       )}
 
-      <div className="flex flex-wrap md:flex-nowrap justify-center text-center md:justify-start md:text-justify">
+      <div className="flex flex-wrap md:flex-nowrap justify-center text-center md:justify-start md:text-justify pl-[20px] pr-[20px]">
         <div className="basis-[70%]">
           <p className="tracking-tight text-[32px] md:text-[5.5em] leading-[48px] md:leading-[95.11px] font-medium">
             {' '}
@@ -221,14 +224,14 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      <div className="mt-[60px]">
+      <div className="mt-[60px] mb-[60px]">
         <h2 className="text-center text-base md:text-[40px] leading-[25.36px] md:font-medium md:leading-[158.56%]">
           No solo lo decimos nosotros, lo dice la comunidad
         </h2>
         <div className="ml-auto mr-auto bg-primary h-[4px] rounded-[50px] md:w-[27%] md:h-[10px]"></div>
-        <div className="flex flex-wrap sm:flex-nowrap gap-x-[100px] mt-[60px] italic text-base leading-[25.36px]">
-          <div className="w-[212px] rounded-[30px] overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.25)]">
-            <img src={userJanna} alt="" />
+        <Slider>
+          <div className="min-w-[212px] max-w-[212px] rounded-[30px] overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.25)]">
+            <img className="pointer-events-none" src={userJanna} alt="" />
             <div className="p-[15px] pt-[10px]">
               <blockquote className="">
                 “<span className="font-bold">EZ</span> no solo me dio las
@@ -240,8 +243,8 @@ const LandingPage = () => {
               </address>
             </div>
           </div>
-          <div className="w-[212px] rounded-[30px] overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.25)]">
-            <img src={userGaren} alt="" />
+          <div className="min-w-[212px] max-w-[212px] rounded-[30px] overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.25)]">
+            <img className="pointer-events-none" src={userGaren} alt="" />
             <div className="p-[15px] pt-[10px]">
               <blockquote className="">
                 “Gracias a <span className="font-bold">EZ</span> pude
@@ -253,8 +256,8 @@ const LandingPage = () => {
               </address>
             </div>
           </div>
-          <div className="w-[212px] rounded-[30px] overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.25)]">
-            <img src={userNasus} alt="" />
+          <div className="min-w-[212px] max-w-[212px] rounded-[30px] overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.25)]">
+            <img className="pointer-events-none" src={userNasus} alt="" />
             <div className="p-[15px] pt-[10px]">
               <blockquote className="">
                 “Vengo de la rama del diseño, gracias a{' '}
@@ -266,8 +269,8 @@ const LandingPage = () => {
               </address>
             </div>
           </div>
-          <div className="w-[212px] rounded-[30px] overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.25)]">
-            <img src={userThresh} alt="" />
+          <div className="min-w-[212px] max-w-[212px] rounded-[30px] overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.25)]">
+            <img className="pointer-events-none" src={userThresh} alt="" />
             <div className="p-[15px] pt-[10px]">
               <blockquote className="">
                 “Luego de 8 meses de mucho aprendizaje logré conseguir mi primer
@@ -279,44 +282,52 @@ const LandingPage = () => {
               </address>
             </div>
           </div>
-        </div>
+        </Slider>
       </div>
-      <div id="proyects">
-        <h2>Proyectos realizados por nuestros estudiantes</h2>
-        <div>
-          <div>
-            <img
-              src="https://res.cloudinary.com/di6mevrkr/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1664078429/no-available_endtpu.jpg"
-              alt=""
-            />
-            <h6>Nombre del proyecto</h6>
-            <p>Alumno</p>
+
+      <div id="proyects" className="mb-[60px]">
+        <h2 className="text-center text-base md:text-[40px] leading-[25.36px] md:font-medium md:leading-[158.56%]">
+          Proyectos realizados por nuestros estudiantes
+        </h2>
+        <div className="ml-auto mr-auto bg-primary h-[4px] rounded-[50px] md:w-[27%] md:h-[10px]"></div>
+        <Slider>
+          <div className="text-white leading-[31.07px] text-[20px] bg-primary flex flex-wrap justify-center min-w-[290px] max-w-[312px] min-h-[312px] max-h-[312px] rounded-[30px]">
+            <div className="w-full flex justify-center items-end">
+              <img className="pointer-events-none" src={cursoImage} alt="" />
+            </div>
+            <div className="w-full flex flex-col justify-center items-start pl-[20px]">
+              <h6 className="font-medium">Nombre del proyecto</h6>
+              <p>Alumno</p>
+            </div>
           </div>
-          <div>
-            <img
-              src="https://res.cloudinary.com/di6mevrkr/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1664078429/no-available_endtpu.jpg"
-              alt=""
-            />
-            <h6>Nombre del proyecto</h6>
-            <p>Alumno</p>
+          <div className="text-white leading-[31.07px] text-[20px] bg-primary flex flex-wrap justify-center min-w-[290px] max-w-[312px] min-h-[312px] max-h-[312px] rounded-[30px]">
+            <div className="w-full flex justify-center items-end">
+              <img className="pointer-events-none" src={cursoImage} alt="" />
+            </div>
+            <div className="w-full flex flex-col justify-center items-start pl-[20px]">
+              <h6 className="font-medium">Nombre del proyecto</h6>
+              <p>Alumno</p>
+            </div>
           </div>
-          <div>
-            <img
-              src="https://res.cloudinary.com/di6mevrkr/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1664078429/no-available_endtpu.jpg"
-              alt=""
-            />
-            <h6>Nombre del proyecto</h6>
-            <p>Alumno</p>
+          <div className="text-white leading-[31.07px] text-[20px] bg-primary flex flex-wrap justify-center min-w-[290px] max-w-[312px] min-h-[312px] max-h-[312px] rounded-[30px]">
+            <div className="w-full flex justify-center items-end">
+              <img className="pointer-events-none" src={cursoImage} alt="" />
+            </div>
+            <div className="w-full flex flex-col justify-center items-start pl-[20px]">
+              <h6 className="font-medium">Nombre del proyecto</h6>
+              <p>Alumno</p>
+            </div>
           </div>
-          <div>
-            <img
-              src="https://res.cloudinary.com/di6mevrkr/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1664078429/no-available_endtpu.jpg"
-              alt=""
-            />
-            <h6>Nombre del proyecto</h6>
-            <p>Alumno</p>
+          <div className="text-white leading-[31.07px] text-[20px] bg-primary flex flex-wrap justify-center min-w-[290px] max-w-[312px] min-h-[312px] max-h-[312px] rounded-[30px]">
+            <div className="w-full flex justify-center items-end">
+              <img className="pointer-events-none" src={cursoImage} alt="" />
+            </div>
+            <div className="w-full flex flex-col justify-center items-start pl-[20px]">
+              <h6 className="font-medium">Nombre del proyecto</h6>
+              <p>Alumno</p>
+            </div>
           </div>
-        </div>
+        </Slider>
       </div>
     </>
   )

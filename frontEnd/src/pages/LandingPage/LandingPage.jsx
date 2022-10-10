@@ -130,9 +130,27 @@ const LandingPage = () => {
       <button name="routes" onClick={handlerClick}>
         Rutas
       </button>
-
-      {selected === 'courses' && <Courses />}
-      {selected === 'routes' && <Routes />}
+      <div class="width-1320px heigth-46px absolute">
+        <div class="width-249px h-47px absolute	-left-1.5	-top-2.5px">
+          <div class="w-68px h-31px absolute left-40 top-8">
+            {selected === 'courses' && <Courses />}
+          </div>
+          <div class="w-104px h-47px absolute left-145 top-0">
+            <div class="w-24px h-24px absolute left-8 top-23/2">
+              <div class="overflow-hidden bg-third w-24px h-24px absolute left-0 top-0">
+                <div class="bg-secondary w-14px h-18px absolute left-6 top-3"></div>
+              </div>
+            </div>
+            <div class="w-56px h-31px absolute left-40 top-8">
+              {selected === 'routes' && <Routes />}
+            </div>
+          </div>
+        </div>
+        <div class="w-1320px h-4px absolute left-0 top-42">
+          <div class="bg-primary w-1320px h-4px absolute left-0 top-0"></div>
+          <div class="bg-secondary w-130px h-4px absolute left-0 top-0"></div>
+        </div>
+      </div>
 
       <div className="w-full text-white bg-primary p-[40px]">
         <h2 className="text-[20px] sm:text-[40px] pb-[20px]">

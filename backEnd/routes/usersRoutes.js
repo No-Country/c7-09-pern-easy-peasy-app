@@ -7,9 +7,10 @@ const {
   destroy,
   showById,
 } = require('../controllers/usersControllers')
+const { createUserValidators } = require('../middlewares/validatorsMiddlewares')
 
 router.get('/users', showAll)
-router.post('/users', create)
+router.post('/users', createUserValidators, create)
 router.put('/users/:id', update)
 router.delete('/users/:id', destroy)
 router.get('/users/:id', showById)

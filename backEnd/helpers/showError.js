@@ -4,7 +4,8 @@ const showError = (res, e) => {
     mesagge: e.message,
     code: e.code,
   }
-  res.status(500).json(responseError)
+
+  return res.status(500).json(responseError)
 }
 
 module.exports = { showError }

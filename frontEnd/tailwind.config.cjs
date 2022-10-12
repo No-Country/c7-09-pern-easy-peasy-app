@@ -13,6 +13,7 @@ module.exports = {
         'gray-1': '#f2f2f2',
         'blue-1': '#7ca7b6',
         'black-80p': 'rgba(26, 25, 25, 0.8)',
+        'hoverNav': '#47B5FF'
       },
       backgroundImage: {
         handcoding: 'url("./src/assets/portadaEZ.gif")',

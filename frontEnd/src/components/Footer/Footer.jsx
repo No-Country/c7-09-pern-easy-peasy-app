@@ -7,16 +7,6 @@ const Footer = () => {
       <div className="text-white text-sm basis-[180px]">
         <h3 className="mb-[19px] text-base">DESARROLLADORES</h3>
         <ul className="flex flex-col gap-[15px]">
-          <li>
-            <a href="" target="_blank">
-              <img
-                className="inline w-[24px]"
-                src={linkedinImg}
-                alt="linkedin icono"
-              />
-              &nbsp;Carlos Mejía
-            </a>
-          </li>
 
           <li>
             <a href="" target="_blank">
@@ -36,40 +26,7 @@ const Footer = () => {
                 src={linkedinImg}
                 alt="linkedin icono"
               />
-              &nbsp;Erick Seis
-            </a>
-          </li>
-
-          <li>
-            <a href="" target="_blank">
-              <img
-                className="inline w-[24px]"
-                src={linkedinImg}
-                alt="linkedin icono"
-              />
-              &nbsp;Jonatan Di Vincenzo
-            </a>
-          </li>
-
-          <li>
-            <a href="" target="_blank">
-              <img
-                className="inline w-[24px]"
-                src={linkedinImg}
-                alt="linkedin icono"
-              />
               &nbsp;Jorge Camargo
-            </a>
-          </li>
-
-          <li>
-            <a href="" target="_blank">
-              <img
-                className="inline w-[24px]"
-                src={linkedinImg}
-                alt="linkedin icono"
-              />
-              &nbsp;Ricardo Jorge
             </a>
           </li>
 

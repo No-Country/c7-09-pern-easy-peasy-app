@@ -18,7 +18,7 @@ const Nav = () => {
 
   return (
     <div className="flex justify-around flex-wrap space-x-20 items-center shadow-md bg-white p-3">
-      <img src={iconoWeb} className="m-2 sm:h-12" alt="EZ Logo" />
+      <img src={iconoWeb} className="w-65 h-6 sm:h-12" alt="EZ Logo" />
       <div className="font-bold-light text-lg space-x-10 tracking-normal">
         <Link
           to="proyects"

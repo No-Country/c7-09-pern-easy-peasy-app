@@ -146,8 +146,7 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-        <div class="w-1320px h-4px absolute left-0 top-42">
-        </div>
+        <div class="w-1320px h-4px absolute left-0 top-42"></div>
       </div>
 
       <div className="w-full text-white bg-primary p-[40px]">

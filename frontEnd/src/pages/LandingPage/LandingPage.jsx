@@ -147,8 +147,6 @@ const LandingPage = () => {
           </div>
         </div>
         <div class="w-1320px h-4px absolute left-0 top-42">
-          <div class="bg-primary w-1320px h-4px absolute left-0 top-0"></div>
-          <div class="bg-secondary w-130px h-4px absolute left-0 top-0"></div>
         </div>
       </div>
 

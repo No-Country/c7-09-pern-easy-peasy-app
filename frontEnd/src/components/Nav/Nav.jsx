@@ -84,18 +84,14 @@ const Nav = () => {
           placeholder="HTML, CSS, JavaScript..."
         />
       </div>
-      <div className=' flex space-x-4'>
-      <img
-        className="w-65 h-6 sm:h-10"
-        src={iconCart}
-        alt="emptyCardImg"
-      />
-      <button
-        className="modal bg-hoverNav hover:bg-gray-100 text-gray-800 font-ligth text-sm  xl:w-1/7 py-2 px-4 shadow-md border border-gray-300 rounded-full"
-        onClick={handlerModalLogin}
-      >
-        Entrar
-      </button>
+      <div className=" flex space-x-4">
+        <img className="w-65 h-6 sm:h-10" src={iconCart} alt="emptyCardImg" />
+        <button
+          className="modal bg-hoverNav hover:bg-gray-100 text-gray-800 font-ligth text-sm  xl:w-1/7 py-2 px-4 shadow-md border border-gray-300 rounded-full"
+          onClick={handlerModalLogin}
+        >
+          Entrar
+        </button>
       </div>
       {showModal && (
         <ModalLogin handlerModalLogin={handlerModalLogin}>

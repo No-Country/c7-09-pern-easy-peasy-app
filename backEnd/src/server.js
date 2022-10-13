@@ -2,7 +2,8 @@ const express = require('express')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 require('dotenv').config()
-// const { uploadImage } = require('../helpers/cloudinary')
+// const fs = require('fs')
+// const path = require('path')
 
 const app = express()
 
@@ -12,18 +13,15 @@ app.use(logger('dev'))
 app.use(cookieParser())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
-// const imagePath = 'https://cdn-icons-png.flaticon.com/512/4359/4359916.png'
 
-// const cargarImagen = async () => {
-//   try {
-//     await uploadImage(imagePath, 'avatars')
-//     console.log(uploadImage(imagePath))
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
+// fs.createWriteStream(path.join(__dirname, '../tmp', 'access.log'), {
+//   flags: 'a',
+// })
 
-// cargarImagen()
+// fs.createWriteStream(path.join(__dirname, '../tmp', 'hola.log'), {
+//   flags: 'a',
+// })
+
 app.listen(PORT, () => {
   console.log('Server started on port ' + PORT)
 })

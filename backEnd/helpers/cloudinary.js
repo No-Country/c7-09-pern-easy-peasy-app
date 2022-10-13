@@ -29,3 +29,16 @@ exports.uploadImage = async (imagePath) => {
     throw new Error(error)
   }
 }
+
+// const imagePath = 'https://cdn-icons-png.flaticon.com/512/4359/4359916.png'
+
+// const cargarImagen = async () => {
+//   try {
+//     await uploadImage(imagePath, 'avatars')
+//     console.log(uploadImage(imagePath))
+//   } catch (error) {
+//     console.log(error)
+//   }
+// }
+
+// cargarImagen()

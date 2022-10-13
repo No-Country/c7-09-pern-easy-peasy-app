@@ -7,7 +7,6 @@ const Footer = () => {
       <div className="text-white text-sm basis-[180px]">
         <h3 className="mb-[19px] text-base">DESARROLLADORES</h3>
         <ul className="flex flex-col gap-[15px]">
-
           <li>
             <a href="" target="_blank">
               <img

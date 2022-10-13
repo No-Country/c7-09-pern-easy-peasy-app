@@ -128,25 +128,38 @@ const LandingPage = () => {
       </div>
       <div class="border-b border-x-hoverNav dark:border-x-hoverNav">
         <ul className="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
-        <li className="mr-10 inline-flex">
-        <img src={cursosIcon} alt="Aprende a tu ritmo" className="w-65 h-4 sm:h-8"/>
-        <button class="text-blue-600 rounded-t-lg border-b-2 border-blue-600 active dark:text-blue-500 dark:border-blue-500 group"
-        name="courses" onClick={handlerClick}>
-          Cursos
-        </button>
-      </li>
-      <li className="mr-2 inline-flex">
-      <img src={iconRuta} alt="Aprende a tu ritmo" className="w-65 h-4 sm:h-8"/>
-      <button 
-      className="text-primary rounded-t-lg border-b-2 border-primary active dark:text-primary dark:border-primary group" 
-      name="routes" onClick={handlerClick}>
-        Rutas
-      </button>
-      </li>
-      </ul>
+          <li className="mr-10 inline-flex">
+            <img
+              src={cursosIcon}
+              alt="Aprende a tu ritmo"
+              className="w-65 h-4 sm:h-8"
+            />
+            <button
+              class="text-blue-600 rounded-t-lg border-b-2 border-blue-600 active dark:text-blue-500 dark:border-blue-500 group"
+              name="courses"
+              onClick={handlerClick}
+            >
+              Cursos
+            </button>
+          </li>
+          <li className="mr-2 inline-flex">
+            <img
+              src={iconRuta}
+              alt="Aprende a tu ritmo"
+              className="w-65 h-4 sm:h-8"
+            />
+            <button
+              className="text-primary rounded-t-lg border-b-2 border-primary active dark:text-primary dark:border-primary group"
+              name="routes"
+              onClick={handlerClick}
+            >
+              Rutas
+            </button>
+          </li>
+        </ul>
       </div>
-            {selected === 'courses' && <Courses />}
-            {selected === 'routes' && <Routes />}
+      {selected === 'courses' && <Courses />}
+      {selected === 'routes' && <Routes />}
 
       <div className="w-full text-white bg-primary p-[40px]">
         <h2 className="text-[20px] sm:text-[40px] pb-[20px]">

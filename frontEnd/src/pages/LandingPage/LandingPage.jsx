@@ -1,5 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
-import { motion } from 'framer-motion'
+import { useState } from 'react'
 import Courses from '../../components/Courses/Courses'
 import Routes from '../../components/NavCourses/NavCourses'
 import { images } from './../../assets'

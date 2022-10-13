@@ -8,6 +8,8 @@ CREATE TABLE client (
   lastname VARCHAR(30) NOT NULL,
   email VARCHAR(50) NOT NULL UNIQUE,
   password VARCHAR(255) NOT NULL,
+  is_role VARCHAR(10) NOT NULL DEFAULT 'client',
+  image_url VARCHAR(255),
   createnate TIMESTAMP NOT NULL,
   updatenate TIMESTAMP NOT NULL
 );

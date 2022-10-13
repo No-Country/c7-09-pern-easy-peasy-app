@@ -16,7 +16,7 @@ const newUser = async (payload) => {
     const result = await pool.query(SQLquery)
     return result.rows
   } catch (e) {
-    console.log('error al insertar datos en tabla user: ', e.code, e.message)
+    console.log('error al insertar datos en tabla client: ', e.code, e.message)
     throw new Error(e)
   }
 }
@@ -29,7 +29,7 @@ const allUsers = async () => {
     const result = await pool.query(SQLquery)
     return result.rows
   } catch (e) {
-    console.log('error al consultar datos en tabla user: ', e.code, e.message)
+    console.log('error al consultar datos en tabla client: ', e.code, e.message)
     throw new Error(e)
   }
 }
@@ -50,7 +50,11 @@ const updateUser = async (id, payload) => {
     const result = await pool.query(SQLquery)
     return result.rows
   } catch (e) {
-    console.log('error al actualizar datos en tabla user: ', e.code, e.message)
+    console.log(
+      'error al actualizar datos en tabla client: ',
+      e.code,
+      e.message
+    )
     throw new Error(e)
   }
 }
@@ -64,7 +68,7 @@ const showUserById = async (id) => {
     const result = await pool.query(SQLquery)
     return result.rows
   } catch (e) {
-    console.log('error al consultar datos en tabla user: ', e.code, e.message)
+    console.log('error al consultar datos en tabla client: ', e.code, e.message)
     throw new Error(e)
   }
 }
@@ -78,7 +82,7 @@ const deleteUser = async (id) => {
     const result = await pool.query(SQLquery)
     return result.rows
   } catch (e) {
-    console.log('error al eliminar datos en tabla user: ', e.code, e.message)
+    console.log('error al eliminar datos en tabla client: ', e.code, e.message)
     throw new Error(e)
   }
 }
@@ -92,7 +96,7 @@ const getUserByEmail = async (email) => {
     const result = await pool.query(SQLquery)
     return result.rows
   } catch (e) {
-    console.log('error al consultar datos en tabla user: ', e.code, e.message)
+    console.log('error al consultar datos en tabla client: ', e.code, e.message)
     throw new Error(e)
   }
 }

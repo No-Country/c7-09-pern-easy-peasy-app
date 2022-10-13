@@ -93,7 +93,7 @@ const LandingPage = () => {
         </ModalLogin>
       )}
 
-      <div className="flex flex-wrap md:flex-nowrap justify-center text-center md:justify-start md:text-justify pl-[20px] pr-[20px]">
+      <div className="flex flex-wrap md:flex-nowrap justify-center text-center md:justify-start md:text-justify pl-[20px] pr-[20px] bg-background">
         <div className="basis-[70%]">
           <p className="tracking-tight text-[32px] md:text-[5.5em] leading-[48px] md:leading-[95.11px] font-medium">
             {' '}
@@ -125,8 +125,8 @@ const LandingPage = () => {
           Por eso en EZ tú puedes personalizar tu ruta de aprendizaje
         </h3>
       </div>
-      <div class="border-b border-x-hoverNav dark:border-x-hoverNav">
-        <ul className="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
+      <div class="mb-4 border-b container mx-auto px-20 lg:container lg:mx-auto border-x-hoverNav dark:border-x-hoverNav p-2">
+        <ul className="flex flex-wrap flex-col md:flex-row -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
           <li className="mr-10 inline-flex">
             <img
               src={cursosIcon}
@@ -134,7 +134,7 @@ const LandingPage = () => {
               className="w-65 h-4 sm:h-8"
             />
             <button
-              class="text-blue-600 rounded-t-lg border-b-2 border-blue-600 active dark:text-blue-500 dark:border-blue-500 group"
+              class="text-blue-600 rounded-t-lg border-b-2 border-blue-600 active border-x-0 border-t-0 dark:text-blue-500 dark:border-blue-500 group"
               name="courses"
               onClick={handlerClick}
             >
@@ -152,11 +152,12 @@ const LandingPage = () => {
               name="routes"
               onClick={handlerClick}
             >
-              Rutas
+              Rutas                                                                        
             </button>
           </li>
-        </ul>
+          </ul>
       </div>
+    
       {selected === 'courses' && <Courses />}
       {selected === 'routes' && <Routes />}
 

@@ -14,17 +14,6 @@ const Footer = () => {
                 src={linkedinImg}
                 alt="linkedin icono"
               />
-              &nbsp;Carlos Mejía
-            </a>
-          </li>
-
-          <li>
-            <a href="" target="_blank">
-              <img
-                className="inline w-[24px]"
-                src={linkedinImg}
-                alt="linkedin icono"
-              />
               &nbsp;Eliz Longart
             </a>
           </li>
@@ -36,40 +25,7 @@ const Footer = () => {
                 src={linkedinImg}
                 alt="linkedin icono"
               />
-              &nbsp;Erick Seis
-            </a>
-          </li>
-
-          <li>
-            <a href="" target="_blank">
-              <img
-                className="inline w-[24px]"
-                src={linkedinImg}
-                alt="linkedin icono"
-              />
-              &nbsp;Jonatan Di Vincenzo
-            </a>
-          </li>
-
-          <li>
-            <a href="" target="_blank">
-              <img
-                className="inline w-[24px]"
-                src={linkedinImg}
-                alt="linkedin icono"
-              />
               &nbsp;Jorge Camargo
-            </a>
-          </li>
-
-          <li>
-            <a href="" target="_blank">
-              <img
-                className="inline w-[24px]"
-                src={linkedinImg}
-                alt="linkedin icono"
-              />
-              &nbsp;Ricardo Jorge
             </a>
           </li>
 

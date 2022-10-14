@@ -10,7 +10,8 @@ const NavCourses = () => {
         <option value="">Fecha de actualización</option>
         <option value="">Puntuación</option>
       </select>
-      {dataCourses.length === 0 ? (
+      <div className="grid grid-cols-3 gap-4 pt-8">
+        {dataCourses.length === 0 ? (
         <p>There are no routes</p>
       ) : (
         dataCourses.map((route) => (
@@ -25,6 +26,7 @@ const NavCourses = () => {
           </div>
         ))
       )}
+    </div>
     </div>
   )
 }

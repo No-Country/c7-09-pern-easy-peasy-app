@@ -4,14 +4,11 @@ import Routes from '../../components/NavCourses/NavCourses'
 import { images } from './../../assets'
 import ModalLogin from '../../components/Modal/ModalLogin'
 import userCeo from '../../assets/userCEO.jpg'
-import userGaren from '../../assets/userGaren.jpg'
-import userJanna from '../../assets/userJanna.jpg'
-import userThresh from '../../assets/userThresh.jpg'
-import userNasus from '../../assets/userNasus.jpg'
 import cursoImage from '../../assets/curso-no-available.svg'
 import Slider from '../../components/Slider/Slider'
 import cursosIcon from '../../assets/cursosIcon.svg'
 import iconRuta from '../../assets/iconRuta.svg'
+import { UserStories } from '../../components/userStories/UserStories'
 // css
 
 const LandingPage = () => {
@@ -257,58 +254,7 @@ const LandingPage = () => {
         </h2>
         <div className="ml-auto mr-auto bg-primary h-[4px] rounded-[50px] md:w-[27%] md:h-[10px]"></div>
         <Slider>
-          <div className="min-w-[212px] max-w-[212px] rounded-[30px] overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.25)]">
-            <img className="pointer-events-none" src={userJanna} alt="" />
-            <div className="p-[15px] pt-[10px]">
-              <blockquote className="">
-                “<span className="font-bold">EZ</span> no solo me dio las
-                herramientas para insertarme en el mundo IT, sino una comunidad
-                en la cual apoyarme”
-              </blockquote>
-              <address className="text-right text-sm font-medium leading-[22.19px]">
-                <h6>Janna</h6>
-              </address>
-            </div>
-          </div>
-          <div className="min-w-[212px] max-w-[212px] rounded-[30px] overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.25)]">
-            <img className="pointer-events-none" src={userGaren} alt="" />
-            <div className="p-[15px] pt-[10px]">
-              <blockquote className="">
-                “Gracias a <span className="font-bold">EZ</span> pude
-                actualizarme en tecnologías especificas, y formarme como Full
-                Stack”
-              </blockquote>
-              <address className="text-right text-sm font-medium leading-[22.19px]">
-                <h6>Garen</h6>
-              </address>
-            </div>
-          </div>
-          <div className="min-w-[212px] max-w-[212px] rounded-[30px] overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.25)]">
-            <img className="pointer-events-none" src={userNasus} alt="" />
-            <div className="p-[15px] pt-[10px]">
-              <blockquote className="">
-                “Vengo de la rama del diseño, gracias a{' '}
-                <span className="font-bold">EZ</span>, hoy puedo desempeñarme
-                como UI&motion”
-              </blockquote>
-              <address className="text-right text-sm font-medium leading-[22.19px]">
-                <h6>Nasus</h6>
-              </address>
-            </div>
-          </div>
-          <div className="min-w-[212px] max-w-[212px] rounded-[30px] overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.25)]">
-            <img className="pointer-events-none" src={userThresh} alt="" />
-            <div className="p-[15px] pt-[10px]">
-              <blockquote className="">
-                “Luego de 8 meses de mucho aprendizaje logré conseguir mi primer
-                trabajo como Backend, gracias a{' '}
-                <span className="font-bold">EZ</span>”
-              </blockquote>
-              <address className="text-right text-sm font-medium leading-[22.19px]">
-                <h6>Maria</h6>
-              </address>
-            </div>
-          </div>
+          <UserStories />
         </Slider>
       </div>
 

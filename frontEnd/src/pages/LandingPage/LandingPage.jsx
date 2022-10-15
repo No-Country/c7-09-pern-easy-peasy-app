@@ -152,12 +152,12 @@ const LandingPage = () => {
               name="routes"
               onClick={handlerClick}
             >
-              Rutas                                                                        
+              Rutas
             </button>
           </li>
-          </ul>
+        </ul>
       </div>
-    
+
       {selected === 'courses' && <Courses />}
       {selected === 'routes' && <Routes />}
 

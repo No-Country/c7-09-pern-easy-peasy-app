@@ -8,10 +8,10 @@ import userGaren from '../../assets/userGaren.jpg'
 import userJanna from '../../assets/userJanna.jpg'
 import userThresh from '../../assets/userThresh.jpg'
 import userNasus from '../../assets/userNasus.jpg'
-import cursoImage from '../../assets/curso-no-available.svg'
 import Slider from '../../components/Slider/Slider'
 import cursosIcon from '../../assets/cursosIcon.svg'
 import iconRuta from '../../assets/iconRuta.svg'
+import StudenProjects from "../../components/studentProjects/studentProjects.jsx"
 // css
 
 const LandingPage = () => {
@@ -318,42 +318,7 @@ const LandingPage = () => {
         </h2>
         <div className="ml-auto mr-auto bg-primary h-[4px] rounded-[50px] md:w-[27%] md:h-[10px]"></div>
         <Slider>
-          <div className="text-white leading-[31.07px] text-[20px] bg-primary flex flex-wrap justify-center min-w-[290px] max-w-[312px] min-h-[312px] max-h-[312px] rounded-[30px]">
-            <div className="w-full flex justify-center items-end">
-              <img className="pointer-events-none" src={cursoImage} alt="" />
-            </div>
-            <div className="w-full flex flex-col justify-center items-start pl-[20px]">
-              <h6 className="font-medium">Nombre del proyecto</h6>
-              <p>Alumno</p>
-            </div>
-          </div>
-          <div className="text-white leading-[31.07px] text-[20px] bg-primary flex flex-wrap justify-center min-w-[290px] max-w-[312px] min-h-[312px] max-h-[312px] rounded-[30px]">
-            <div className="w-full flex justify-center items-end">
-              <img className="pointer-events-none" src={cursoImage} alt="" />
-            </div>
-            <div className="w-full flex flex-col justify-center items-start pl-[20px]">
-              <h6 className="font-medium">Nombre del proyecto</h6>
-              <p>Alumno</p>
-            </div>
-          </div>
-          <div className="text-white leading-[31.07px] text-[20px] bg-primary flex flex-wrap justify-center min-w-[290px] max-w-[312px] min-h-[312px] max-h-[312px] rounded-[30px]">
-            <div className="w-full flex justify-center items-end">
-              <img className="pointer-events-none" src={cursoImage} alt="" />
-            </div>
-            <div className="w-full flex flex-col justify-center items-start pl-[20px]">
-              <h6 className="font-medium">Nombre del proyecto</h6>
-              <p>Alumno</p>
-            </div>
-          </div>
-          <div className="text-white leading-[31.07px] text-[20px] bg-primary flex flex-wrap justify-center min-w-[290px] max-w-[312px] min-h-[312px] max-h-[312px] rounded-[30px]">
-            <div className="w-full flex justify-center items-end">
-              <img className="pointer-events-none" src={cursoImage} alt="" />
-            </div>
-            <div className="w-full flex flex-col justify-center items-start pl-[20px]">
-              <h6 className="font-medium">Nombre del proyecto</h6>
-              <p>Alumno</p>
-            </div>
-          </div>
+        <StudenProjects />
         </Slider>
       </div>
     </>

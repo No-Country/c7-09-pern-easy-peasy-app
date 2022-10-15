@@ -125,7 +125,7 @@ const LandingPage = () => {
           Por eso en EZ tú puedes personalizar tu ruta de aprendizaje
         </h3>
       </div>
-      <div class="mb-4 border-b container mx-auto px-20 lg:container lg:mx-auto border-x-hoverNav dark:border-x-hoverNav p-2">
+      <div className="mb-4 border-b container mx-auto px-20 lg:container lg:mx-auto border-x-hoverNav dark:border-x-hoverNav p-2">
         <ul className="flex flex-wrap flex-col md:flex-row -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
           <li className="mr-10 inline-flex">
             <img
@@ -134,7 +134,7 @@ const LandingPage = () => {
               className="w-65 h-4 sm:h-8"
             />
             <button
-              class="text-blue-600 rounded-t-lg border-b-2 border-blue-600 active border-x-0 border-t-0 dark:text-blue-500 dark:border-blue-500 group"
+              className="text-blue-600 rounded-t-lg border-b-2 border-blue-600 active border-x-0 border-t-0 dark:text-blue-500 dark:border-blue-500 group"
               name="courses"
               onClick={handlerClick}
             >
@@ -257,58 +257,7 @@ const LandingPage = () => {
         </h2>
         <div className="ml-auto mr-auto bg-primary h-[4px] rounded-[50px] md:w-[27%] md:h-[10px]"></div>
         <Slider>
-          <div className="min-w-[212px] max-w-[212px] rounded-[30px] overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.25)]">
-            <img className="pointer-events-none" src={userJanna} alt="" />
-            <div className="p-[15px] pt-[10px]">
-              <blockquote className="">
-                “<span className="font-bold">EZ</span> no solo me dio las
-                herramientas para insertarme en el mundo IT, sino una comunidad
-                en la cual apoyarme”
-              </blockquote>
-              <address className="text-right text-sm font-medium leading-[22.19px]">
-                <h6>Janna</h6>
-              </address>
-            </div>
-          </div>
-          <div className="min-w-[212px] max-w-[212px] rounded-[30px] overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.25)]">
-            <img className="pointer-events-none" src={userGaren} alt="" />
-            <div className="p-[15px] pt-[10px]">
-              <blockquote className="">
-                “Gracias a <span className="font-bold">EZ</span> pude
-                actualizarme en tecnologías especificas, y formarme como Full
-                Stack”
-              </blockquote>
-              <address className="text-right text-sm font-medium leading-[22.19px]">
-                <h6>Garen</h6>
-              </address>
-            </div>
-          </div>
-          <div className="min-w-[212px] max-w-[212px] rounded-[30px] overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.25)]">
-            <img className="pointer-events-none" src={userNasus} alt="" />
-            <div className="p-[15px] pt-[10px]">
-              <blockquote className="">
-                “Vengo de la rama del diseño, gracias a{' '}
-                <span className="font-bold">EZ</span>, hoy puedo desempeñarme
-                como UI&motion”
-              </blockquote>
-              <address className="text-right text-sm font-medium leading-[22.19px]">
-                <h6>Nasus</h6>
-              </address>
-            </div>
-          </div>
-          <div className="min-w-[212px] max-w-[212px] rounded-[30px] overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.25)]">
-            <img className="pointer-events-none" src={userThresh} alt="" />
-            <div className="p-[15px] pt-[10px]">
-              <blockquote className="">
-                “Luego de 8 meses de mucho aprendizaje logré conseguir mi primer
-                trabajo como Backend, gracias a{' '}
-                <span className="font-bold">EZ</span>”
-              </blockquote>
-              <address className="text-right text-sm font-medium leading-[22.19px]">
-                <h6>Maria</h6>
-              </address>
-            </div>
-          </div>
+          <UserStories />
         </Slider>
       </div>
 

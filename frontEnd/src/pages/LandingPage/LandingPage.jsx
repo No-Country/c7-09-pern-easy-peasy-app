@@ -125,7 +125,7 @@ const LandingPage = () => {
           Por eso en EZ tú puedes personalizar tu ruta de aprendizaje
         </h3>
       </div>
-      <div class="mb-4 border-b container mx-auto px-20 lg:container lg:mx-auto border-x-hoverNav dark:border-x-hoverNav p-2">
+      <div className="mb-4 border-b container mx-auto px-20 lg:container lg:mx-auto border-x-hoverNav dark:border-x-hoverNav p-2">
         <ul className="flex flex-wrap flex-col md:flex-row -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
           <li className="mr-10 inline-flex">
             <img
@@ -134,7 +134,7 @@ const LandingPage = () => {
               className="w-65 h-4 sm:h-8"
             />
             <button
-              class="text-blue-600 rounded-t-lg border-b-2 border-blue-600 active border-x-0 border-t-0 dark:text-blue-500 dark:border-blue-500 group"
+              className="text-blue-600 rounded-t-lg border-b-2 border-blue-600 active border-x-0 border-t-0 dark:text-blue-500 dark:border-blue-500 group"
               name="courses"
               onClick={handlerClick}
             >

@@ -7,7 +7,6 @@ const {
   deleteUser,
 } = require('../models/userModel')
 const { showError, sendEmail } = require('../helpers')
-// const { v4: uuidv4 } = require('uuid')
 
 exports.create = async (req, res) => {
   const { firstName, lastName, email, password } = req.body

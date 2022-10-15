@@ -8,7 +8,7 @@ const Courses = () => {
         <span className="w-28 h-10  font-family-poppins text-left text-base tracking-normal">
           Ordenado por:
         </span>
-        <div class="border solid"></div>
+        <div className="border solid"></div>
         <select
           name=""
           id="select-order"

@@ -1,9 +1,9 @@
-import Projects from '../projects/projects.jsx'
+import Projects from './projects.jsx'
 import cursoImage from '../../assets/curso-no-available.svg'
 
 export const StudentProjects = () => {
   return (
-    <div className="grid grid-cols-4 gap-24 sm:gap-24 md:gap-24 lg:gap-24-4 xl:gap-24 items-stretch">
+    <>
       <Projects
         img={cursoImage}
         projectName={'Nombre del proyecto'}
@@ -24,7 +24,7 @@ export const StudentProjects = () => {
         projectName={'Nombre del proyecto'}
         studentName={'Eliezcar Páez'}
       />
-    </div>
+    </>
   )
 }
 

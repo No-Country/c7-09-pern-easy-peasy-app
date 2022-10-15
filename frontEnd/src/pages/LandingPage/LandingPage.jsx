@@ -1,17 +1,15 @@
 import { useState } from 'react'
 import Courses from '../../components/Courses/Courses'
 import Routes from '../../components/NavCourses/NavCourses'
-import { images } from './../../assets'
 import ModalLogin from '../../components/Modal/ModalLogin'
-import userCeo from '../../assets/userCEO.jpg'
-import userGaren from '../../assets/userGaren.jpg'
-import userJanna from '../../assets/userJanna.jpg'
-import userThresh from '../../assets/userThresh.jpg'
-import userNasus from '../../assets/userNasus.jpg'
 import Slider from '../../components/Slider/Slider'
 import cursosIcon from '../../assets/cursosIcon.svg'
 import iconRuta from '../../assets/iconRuta.svg'
 import StudenProjects from '../../components/studentProjects/studentProjects.jsx'
+import UserStories  from '../../components/userStories/UserStories.jsx'
+import Welcome from '../../components/Welcome/Welcome'
+import Aspirations from '../../components/aspirations/aspirations'
+import Ceo from '../../components/CEO/ceo'
 // css
 
 const LandingPage = () => {
@@ -117,14 +115,9 @@ const LandingPage = () => {
         </div>
         <div className="w-[100%] md:w-[456px] h-[456px]  rounded-[149px 136px 144px 137px] bg-handcoding bg-center bg-contain bg-no-repeat"></div>
       </div>
-      <div className="leading-[37px] sm:text-center md:text-right lg:text-justify xl:text-center">
-        <h2 className="font-bold text-[3em] text-left">
-          Sabemos que tú decides a dónde quieres llegar
-        </h2>
-        <h3 className="text-[2em] text-left">
-          Por eso en EZ tú puedes personalizar tu ruta de aprendizaje
-        </h3>
-      </div>
+
+      <Welcome />
+
       <div className="mb-4 border-b container mx-auto px-20 lg:container lg:mx-auto border-x-hoverNav dark:border-x-hoverNav p-2">
         <ul className="flex flex-wrap flex-col md:flex-row -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
           <li className="mr-10 inline-flex">
@@ -161,96 +154,10 @@ const LandingPage = () => {
       {selected === 'courses' && <Courses />}
       {selected === 'routes' && <Routes />}
 
-      <div className="w-full text-white bg-primary p-[40px]">
-        <h2 className="text-[20px] sm:text-[40px] pb-[20px]">
-          Qué esperar de los cursos de EZ
-        </h2>
-        <div className="flex flex-wrap justify-between gap-y-[20px]">
-          <div className="md:basis-[49.5%] flex items-center gap-x-[10px]">
-            <img src={images.queEsperar1} alt="Aprende a tu ritmo" />
-            <div>
-              <h3 className="text-[13px] sm:text-[24px] font-medium">
-                Aprende a tu ritmo
-              </h3>
-              <p className="text-[12px] sm:text-[18px] font-light">
-                Contamos con más de +1000 horas de contenido para que aprendas
-                más allá de lo básico. Cursos teóricos y prácticos con
-                proyectos.
-              </p>
-            </div>
-          </div>
-          <div className="md:basis-[49.5%] flex items-center gap-x-[10px]">
-            <img src={images.queEsperar2} alt="Comparte con una comunidad" />
-            <div>
-              <h3 className="text-[13px] sm:text-[24px] font-medium">
-                Comparte con una comunidad
-              </h3>
-              <p className="text-[12px] sm:text-[18px] font-light">
-                Pregunta, pide opinión y ofrece soluciones. Comparte tu
-                experiencia de aprendizaje con otros estudiantes de la comunidad
-                tan apacionados en este mundo como tú.
-              </p>
-            </div>
-          </div>
-          <div className="md:basis-[49.5%] flex items-center gap-x-[10px]">
-            <img
-              src={images.queEsperar3}
-              alt="Aprende de los mejores profesionales"
-            />
-            <div>
-              <h3 className="text-[13px] sm:text-[24px] font-medium">
-                Aprende de los mejores profesionales
-              </h3>
-              <p className="text-[12px] sm:text-[18px] font-light">
-                Aprende de profesionales interesados en mundo laboral!
-                <br />
-                Aprende tips, métodos, y ¿Por qué no? algún truco.
-              </p>
-            </div>
-          </div>
-          <div className="md:basis-[49.5%] flex items-center gap-x-[10px]">
-            <img src={images.queEsperar4} alt="El nivel se adapta a tí" />
-            <div>
-              <h3 className="text-[13px] sm:text-[24px] font-medium">
-                El nivel se adapta a tí
-              </h3>
-              <p className="text-[12px] sm:text-[18px] font-light">
-                Escoge según tu nivel. Contamos con cursos desde nivel inicial,
-                avanzados y sobre temas particulares.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="w-[70%] sm:mt-16 flex flex-wrap sm:flex-nowrap overflow-hidden ">
-        <div className="sm:basis-1/2 flex flex-col sm:flex-row justify-end">
-          <img
-            className="min-h-[65%] max-h-[65%] sm:max-h-[100%] w-full overflow-hidden object-cover object-top rounded-t-[30px] sm:rounded-none sm:rounded-l-[30px]"
-            src={userCeo}
-            alt=""
-          />
-        </div>
-        <div className="sm:basis-1/2 flex justify-center items-center flex-wrap p-[20px] rounded-b-[30px] sm:rounded-none sm:border-0 sm:rounded-r-[30px] sm:border-r border-r-[#256D85] drop-shadow-[0_4px_6px_rgba(0,0,0,0.25)] border-b border-b-[#256D85]">
-          <div className="">
-            <blockquote className="text-sm  leading-[26.95px] md:text-2xl md:leading-[38.05px] font-light">
-              Proponemos una educación accesible y de calidad. Creemos que
-              respetar los tiempos y el ritmo de aprendizaje de cada persona es
-              la <span className="underline text-primary">clave</span> para
-              formar no solo excelentes profesionales sino colegas empaticos
-            </blockquote>
-          </div>
-          <div className="w-full">
-            <address>
-              <h6 className="md:text-[24px] text-dark-primary text-end font-bold	italic">
-                Zed Ramos
-              </h6>
-              <p className="md:text-[14px] text-primary text-end">
-                CTO y Co-fundador EZ
-              </p>
-            </address>
-          </div>
-        </div>
-      </div>
+      <Aspirations />
+
+      <Ceo />
+
       <div className="mt-[60px] mb-[60px]">
         <h2 className="text-center text-base md:text-[40px] leading-[25.36px] md:font-medium md:leading-[158.56%]">
           No solo lo decimos nosotros, lo dice la comunidad

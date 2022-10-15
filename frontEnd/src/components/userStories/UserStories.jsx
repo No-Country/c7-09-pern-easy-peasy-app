@@ -53,3 +53,5 @@ export const UserStories = () => {
     </>
   )
 }
+
+export default UserStories

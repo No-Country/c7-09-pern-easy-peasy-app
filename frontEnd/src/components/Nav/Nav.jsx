@@ -1,10 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-scroll'
 import ModalLogin from '../Modal/ModalLogin'
-<<<<<<< HEAD
-=======
-// css
->>>>>>> 9fd3c35904aa5ad615a6081779909f1bd958dadc
 import iconoWeb from '../../assets/iconoWeb.svg'
 import iconCart from '../../assets/iconCart.svg'
 

@@ -11,7 +11,7 @@ import userNasus from '../../assets/userNasus.jpg'
 import Slider from '../../components/Slider/Slider'
 import cursosIcon from '../../assets/cursosIcon.svg'
 import iconRuta from '../../assets/iconRuta.svg'
-import StudenProjects from "../../components/studentProjects/studentProjects.jsx"
+import StudenProjects from '../../components/studentProjects/studentProjects.jsx'
 // css
 
 const LandingPage = () => {
@@ -267,7 +267,7 @@ const LandingPage = () => {
         </h2>
         <div className="ml-auto mr-auto bg-primary h-[4px] rounded-[50px] md:w-[27%] md:h-[10px]"></div>
         <Slider>
-        <StudenProjects />
+          <StudenProjects />
         </Slider>
       </div>
     </>

@@ -6,7 +6,7 @@ import Slider from '../../components/Slider/Slider'
 import cursosIcon from '../../assets/cursosIcon.svg'
 import iconRuta from '../../assets/iconRuta.svg'
 import StudenProjects from '../../components/studentProjects/studentProjects.jsx'
-import UserStories  from '../../components/userStories/UserStories.jsx'
+import UserStories from '../../components/userStories/UserStories.jsx'
 import Welcome from '../../components/Welcome/Welcome'
 import Aspirations from '../../components/aspirations/aspirations'
 import Ceo from '../../components/CEO/ceo'
@@ -78,7 +78,10 @@ const LandingPage = () => {
               </button>
               <p className="italic text-center">
                 ¿Ya tienes una cuenta?{' '}
-                <button className="text-primary font-medium">
+                <button
+                  className="text-primary font-medium"
+                  onClick={handlerModalLogin}
+                >
                   Inicia sesión
                 </button>
               </p>

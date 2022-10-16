@@ -1,9 +1,9 @@
 import { images } from './../../assets'
 
 export const Aspirations = () => {
-    return (
-      <>
-    <div className="w-full text-white bg-primary p-[40px]">
+  return (
+    <>
+      <div className="w-full text-white bg-primary p-[40px]">
         <h2 className="text-[20px] sm:text-[40px] pb-[20px]">
           Qué esperar de los cursos de EZ
         </h2>
@@ -64,8 +64,8 @@ export const Aspirations = () => {
           </div>
         </div>
       </div>
-      </>
-    )
-  }
-  
-  export default Aspirations
+    </>
+  )
+}
+
+export default Aspirations

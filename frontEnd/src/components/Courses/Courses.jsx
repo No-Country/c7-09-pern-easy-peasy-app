@@ -5,8 +5,7 @@ import Ordenamiento from './ordenamiento'
 const Courses = () => {
   return (
     <div>
-      
-      <Ordenamiento/>
+      <Ordenamiento />
 
       <div className="grid grid-cols-3 gap-4 pt-8">
         {dataCards.length === 0 ? (

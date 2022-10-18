@@ -78,7 +78,10 @@ const LandingPage = () => {
               </button>
               <p className="italic text-center">
                 ¿Ya tienes una cuenta?{' '}
-                <button className="text-primary font-medium">
+                <button
+                  className="text-primary font-medium"
+                  onClick={handlerModalLogin}
+                >
                   Inicia sesión
                 </button>
               </p>

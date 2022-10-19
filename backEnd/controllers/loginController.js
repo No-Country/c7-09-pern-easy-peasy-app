@@ -23,7 +23,7 @@ exports.login = async (req, res) => {
         })
       } else {
         // generate JWT
-        console.log(user)
+
         const token = await jwt.sign(
           { id: user[0].id, name: user[0].firstname },
           process.env.JWT_SIGN,

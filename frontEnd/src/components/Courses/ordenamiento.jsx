@@ -13,7 +13,7 @@ export const Ordenamiento = ({ addFilter }) => {
 
   return (
     <>
-      <ul className=" container mx-1 px-2 lg:container lg:mx-auto flex md:flex-row -mb-px text-sm font-medium text-black">
+      <ul className="container mx-1 px-2 lg:container lg:mx-auto flex md:flex-row -mb-px text-sm font-medium text-black">
         <li className="mr-10 inline-flex">
           <span className="font-family-poppins text-base">Ordenado por:</span>
         </li>

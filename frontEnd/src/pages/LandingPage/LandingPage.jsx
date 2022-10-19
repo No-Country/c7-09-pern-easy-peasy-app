@@ -158,11 +158,10 @@ const LandingPage = () => {
       {selected === 'courses' && <Courses />}
       {selected === 'routes' && <Routes />}
 
-      
       <Aspirations />
-      
-      <div className='place-content-end'>
-      <Category />
+
+      <div className="place-content-end">
+        <Category />
       </div>
 
       <Ceo />

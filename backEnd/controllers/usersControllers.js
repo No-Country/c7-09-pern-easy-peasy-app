@@ -25,10 +25,11 @@ exports.create = async (req, res) => {
   try {
     await newUser(payload)
     await sendEmail(email, completeName)
-    payload.password = undefined
-    res
-      .status(200)
-      .json({ message: 'Usuario creado con exito', code: 201, payload })
+
+    res.status(200).json({
+      message: 'Usuario creado con exito',
+      code: 201,
+    })
   } catch (e) {
     showError(res, e)
   }
@@ -36,6 +37,10 @@ exports.create = async (req, res) => {
 exports.showAll = async (req, res) => {
   try {
     const users = await allUsers()
+
+    users.forEach((user) => {
+      delete user.password
+    })
 
     return res.status(200).json(users)
   } catch (e) {

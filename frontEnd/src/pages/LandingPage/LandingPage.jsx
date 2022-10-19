@@ -4,12 +4,13 @@ import Routes from '../../components/NavCourses/NavCourses'
 import ModalLogin from '../../components/Modal/ModalLogin'
 import Slider from '../../components/Slider/Slider'
 import cursosIcon from '../../assets/cursosIcon.svg'
-import iconRuta from '../../assets/iconRuta.svg'
+import icon_ruta from '../../assets/icon_ruta.svg'
 import StudenProjects from '../../components/studentProjects/studentProjects.jsx'
 import UserStories from '../../components/userStories/UserStories.jsx'
 import Welcome from '../../components/Welcome/Welcome'
 import Aspirations from '../../components/aspirations/aspirations'
 import Ceo from '../../components/CEO/ceo'
+import Category from '../../components/Category/category'
 // css
 
 const LandingPage = () => {
@@ -122,7 +123,7 @@ const LandingPage = () => {
       <Welcome />
 
       <div className="mb-4 border-b container mx-auto px-20 lg:container lg:mx-auto border-x-hoverNav dark:border-x-hoverNav p-2">
-        <ul className="flex flex-wrap flex-col md:flex-row -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
+        <ul className="flex flex-wrap flex-row -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
           <li className="mr-10 inline-flex">
             <img
               src={cursosIcon}
@@ -139,7 +140,7 @@ const LandingPage = () => {
           </li>
           <li className="mr-2 inline-flex">
             <img
-              src={iconRuta}
+              src={icon_ruta}
               alt="Aprende a tu ritmo"
               className="w-65 h-4 sm:h-8"
             />
@@ -157,7 +158,12 @@ const LandingPage = () => {
       {selected === 'courses' && <Courses />}
       {selected === 'routes' && <Routes />}
 
+      
       <Aspirations />
+      
+      <div className='place-content-end'>
+      <Category />
+      </div>
 
       <Ceo />
 

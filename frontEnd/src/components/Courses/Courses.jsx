@@ -7,6 +7,7 @@ import {
   filterByPrice,
   filterByPunctuation,
 } from '../../helpers/filters'
+import Category from '../Category/category'
 // css
 
 const Courses = () => {
@@ -35,7 +36,9 @@ const Courses = () => {
   return (
     <div>
       <Ordenamiento addFilter={addFilter} />
-
+      <div>
+       
+      </div>
       <div className="grid grid-cols-3 gap-4 pt-8">
         {coursesFilter.length === 0 ? (
           <p>There are no courses</p>
@@ -52,7 +55,7 @@ const Courses = () => {
             </div>
           ))
         )}
-      </div>
+           </div>
     </div>
   )
 }

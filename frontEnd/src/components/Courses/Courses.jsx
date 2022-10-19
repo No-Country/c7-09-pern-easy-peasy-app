@@ -1,24 +1,48 @@
-import { dataCourses } from '../../data/data'
+import { useFilters } from '../../hooks/useFilters'
+import { dataCards } from '../../data/data'
 import Ordenamiento from './ordenamiento'
+import { useEffect, useState } from 'react'
+import {
+  filterByDate,
+  filterByPrice,
+  filterByPunctuation,
+} from '../../helpers/filters'
 // css
 
 const Courses = () => {
+  const [querys, addFilter, redireccionar] = useFilters()
+  const [coursesFilter, setCoursesFilter] = useState(dataCards)
+
+  useEffect(() => {
+    let newF = [...dataCards]
+    for (const v in querys.combinados) {
+      if (querys.combinados[v] === 'higherprice') {
+        newF = filterByPrice(newF, 'higer')
+      } else if (querys.combinados[v] === 'lowerprice') {
+        newF = filterByPrice(newF, 'lower')
+      } else if (querys.combinados[v] === 'punctuation') {
+        newF = filterByPunctuation(newF)
+      } else if (querys.combinados[v] === 'createdate') {
+        newF = filterByDate(newF, 'create')
+      } else if (querys.combinados[v] === 'updatedate') {
+        newF = filterByDate(newF, 'update')
+      }
+    }
+
+    setCoursesFilter(newF)
+  }, [querys])
+
   return (
     <div>
-      <Ordenamiento />
+      <Ordenamiento addFilter={addFilter} />
 
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 pt-8 md: grid-flow-row ">
-        {dataCourses.length === 0 ? (
+      <div className="grid grid-cols-3 gap-4 pt-8">
+        {coursesFilter.length === 0 ? (
           <p>There are no courses</p>
         ) : (
-          dataCourses.map((course) => (
-            <div
-              key={course.id}
-              className="border-solid border-2 rounded-[15px] bg-white-400 inline-block lg:max-w-lg md:max-w-md sm:max-w-sm"
-            >
-              <div>
-                <img src={course.imgUrl} alt={course.title} />
-              </div>
+          coursesFilter.map((course) => (
+            <div key={course.id}>
+              <img src={course.imgUrl} alt={course.title} />
               <p>{course.title}</p>
               <p>{course.description}</p>
               <div>

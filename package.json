@@ -55,5 +55,8 @@
   },
   "homepage": "https://github.com/No-Country/c7-09-pern-easy-peasy-app#readme",
   "description": "",
-  "dependencies": {}
+  "dependencies": {
+    "cors": "^2.8.5",
+    "jsonwebtoken": "^8.5.1"
+  }
 }

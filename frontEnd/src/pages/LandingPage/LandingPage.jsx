@@ -4,12 +4,13 @@ import Routes from '../../components/NavCourses/NavCourses'
 import ModalLogin from '../../components/Modal/ModalLogin'
 import Slider from '../../components/Slider/Slider'
 import cursosIcon from '../../assets/cursosIcon.svg'
-import iconRuta from '../../assets/iconRuta.svg'
+import icon_ruta from '../../assets/icon_ruta.svg'
 import StudenProjects from '../../components/studentProjects/studentProjects.jsx'
 import UserStories from '../../components/userStories/UserStories.jsx'
 import Welcome from '../../components/Welcome/Welcome'
 import Aspirations from '../../components/aspirations/aspirations'
 import Ceo from '../../components/CEO/ceo'
+import Categories from '../../components/Categories/categories'
 // css
 
 const LandingPage = () => {
@@ -141,7 +142,7 @@ const LandingPage = () => {
           </li>
           <li className="mr-2 inline-flex">
             <img
-              src={iconRuta}
+              src={icon_ruta}
               alt="Aprende a tu ritmo"
               className="w-65 h-4 sm:h-8"
             />
@@ -175,6 +176,10 @@ const LandingPage = () => {
       {selected === 'routes' && <Routes />}
 
       <Aspirations />
+
+      <div className="place-content-end">
+        <Categories />
+      </div>
 
       <Ceo />
 

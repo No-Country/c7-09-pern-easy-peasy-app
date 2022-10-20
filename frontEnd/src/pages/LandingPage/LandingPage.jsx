@@ -3,7 +3,7 @@ import Courses from '../../components/Courses/Courses'
 import Routes from '../../components/NavCourses/NavCourses'
 import ModalLogin from '../../components/Modal/ModalLogin'
 import Slider from '../../components/Slider/Slider'
-import cursosIcon from '../../assets/cursosIcon.svg'
+import iconCurso00 from '../../assets/iconCurso00.svg'
 import icon_ruta from '../../assets/icon_ruta.svg'
 import StudenProjects from '../../components/studentProjects/studentProjects.jsx'
 import UserStories from '../../components/userStories/UserStories.jsx'
@@ -95,12 +95,11 @@ const LandingPage = () => {
         </ModalLogin>
       )}
 
-      <div className="flex flex-wrap md:flex-nowrap justify-center text-center md:justify-start md:text-justify pl-[20px] pr-[20px] bg-background">
+      <div className="flex flex-wrap mx-20 md:flex-nowrap justify-center text-center md:justify-start md:text-justify pl-[20px] pr-[20px] bg-background">
         <div className="basis-[70%]">
           <p className="tracking-tight text-[32px] md:text-[5.5em] leading-[48px] md:leading-[95.11px] font-medium">
-            {' '}
             <span className="font-bold italic text-primary">EZ </span>la
-            plataforma que hace que aprender sea{' '}
+            plataforma que hace que aprender sea
             <span className="font-bold italic text-primary">Easy Peasy</span>
           </p>
           <div className="text-[18px] font-light leading-[38px]">
@@ -126,7 +125,7 @@ const LandingPage = () => {
         <ul className="border-blue-600 flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
           <li className="mr-10 inline-flex">
             <img
-              src={cursosIcon}
+              src={iconCurso00}
               alt="Aprende a tu ritmo"
               className="w-65 h-4 sm:h-8"
             />
@@ -172,14 +171,17 @@ const LandingPage = () => {
         </div>
       </div>
 
-      {selected === 'courses' && <Courses />}
-      {selected === 'routes' && <Routes />}
+      <div className="flex">
+        <div className="place-content-end">
+          <Categories />
+        </div>
+        <div>
+          {selected === 'courses' && <Courses />}
+          {selected === 'routes' && <Routes />}
+        </div>
+      </div>
 
       <Aspirations />
-
-      <div className="place-content-end">
-        <Categories />
-      </div>
 
       <Ceo />
 

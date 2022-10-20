@@ -6,18 +6,20 @@ const {
   updateCourse,
   showCourseById,
 } = require('../models/coursesModels')
+const { uploadImage } = require('../helpers/cloudinary')
 
 exports.create = async (req, res) => {
-  const { title, description, price, imageUrl, resurceUrl } = req.body
+  const { title, description, price, duration, puntuaction, level, objetives } =
+    req.body
 
   const payload = {
     title,
     description,
     price,
-    imageUrl,
-    resurceUrl,
-    createDate: new Date(),
-    updateDate: new Date(),
+    duration,
+    puntuaction,
+    level,
+    objetives,
   }
   try {
     await newCourse(payload)
@@ -83,6 +85,27 @@ exports.showById = async (req, res) => {
     return res.status(200).json({
       status: 'success',
       user,
+    })
+  } catch (e) {
+    showError(res, e)
+    console.log(e)
+  }
+}
+
+exports.updateImage = async (req, res) => {
+  const { id } = req.params
+  const { image } = req.files
+  try {
+    const result = await uploadImage(image.tempFilePath)
+    console.log(result)
+    const payload = {
+      imageUrl: result.url,
+      updateDate: new Date(),
+    }
+    const course = await updateCourse(id, payload)
+    return res.status(200).json({
+      status: 'success',
+      course,
     })
   } catch (e) {
     showError(res, e)

@@ -2,15 +2,15 @@ const pool = require('./../helpers/dbConnect').getInstance()
 
 const newCourse = async (payload) => {
   const SQLquery = {
-    text: `INSERT INTO course (title, description, price, image_url, resurce_url, createdate, updatedate) VALUES ($1, $2, $3, $4, $5, $6,$7)`,
+    text: `INSERT INTO course (title, description, price, duration, puntuaction, level, objetives) VALUES ($1, $2, $3, $4, $5, $6,$7)`,
     values: [
       payload.title,
       payload.description,
       payload.price,
-      payload.imageUrl,
-      payload.resurceUrl,
-      payload.createDate,
-      payload.updateDate,
+      payload.duration,
+      payload.puntuaction,
+      payload.level,
+      payload.objetives,
     ],
   }
   try {
@@ -24,7 +24,7 @@ const newCourse = async (payload) => {
 
 const allCourses = async () => {
   const SQLquery = {
-    text: `SELECT id, title, description, price, image_url, resurce_url, createdate, updatedate FROM course`,
+    text: `SELECT id, title, description, price, duration, puntuaction, image_url, level, objetives, modules, image_url, resurce_url, createdate, updatedate FROM course`,
   }
   try {
     const result = await pool.query(SQLquery)
@@ -103,6 +103,24 @@ const showCourseById = async (id) => {
   }
 }
 
+const updateImageCourse = async (id, payload) => {
+  const SQLquery = {
+    text: `UPDATE course SET image_url = $1, updatedate = $2 WHERE id = $3 RETURNING *`,
+    values: [payload.imageUrl, payload.updateDate, id],
+  }
+  try {
+    const result = await pool.query(SQLquery)
+    return result.rows
+  } catch (e) {
+    console.log(
+      'error al actualizar datos en tabla course: ',
+      e.code,
+      e.message
+    )
+    throw new Error(e)
+  }
+}
+
 module.exports = {
   allCourses,
   newCourse,
@@ -110,4 +128,5 @@ module.exports = {
   showCourse,
   deletecourse,
   showCourseById,
+  updateImageCourse,
 }

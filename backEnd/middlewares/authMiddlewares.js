@@ -57,7 +57,11 @@ const protectUserAccount = (req, res, next) => {
 // const { role } = sessionUser
 
 // if (role !== 'admin') {
-//   return next(new AppError('Admin users only', 403))
+//    const message = 'You do not own this account'
+
+// const e = { message, code: 403 }
+
+// return next(showError(res, e))
 // }
 // next()
 // }

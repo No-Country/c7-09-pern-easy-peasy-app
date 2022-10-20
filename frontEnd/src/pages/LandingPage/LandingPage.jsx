@@ -172,13 +172,13 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className='flex'>
+      <div className="flex">
         <div className="place-content-end">
           <Categories />
         </div>
         <div>
-        {selected === 'courses' && <Courses />}
-        {selected === 'routes' && <Routes />}
+          {selected === 'courses' && <Courses />}
+          {selected === 'routes' && <Routes />}
         </div>
       </div>
 

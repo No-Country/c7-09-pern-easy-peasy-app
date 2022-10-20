@@ -72,21 +72,21 @@ const Courses = () => {
                       </p>
                     </div>
                   </div>
-                  <div className='flex justify-between  '> 
+                  <div className="flex justify-between  ">
                     <span className="mt-2 font-family-inter text-left text-xs text-sky-900 tracking-normal">
                       {course.puntuaction}
                     </span>
                     <strong className="px-5px top-0 font-family-poppins text-right text-lg text-sky-900 tracking-normal">
                       Valor: {course.price} $
                     </strong>
+                  </div>
                 </div>
-                </div>
-                <div className='flex justify-center'> 
-                    <button
-                      type="button"
-                      className="h-[35px] w-[220px] mb-2 text-white bg-primary hover:bg-dark-primary dark:shadow-lg font-family-poppins rounded-full text-[15px] top-[2px] pb-2  py-2 text-center  "
-                      >
-                      Añadir al carrito
+                <div className="flex justify-center">
+                  <button
+                    type="button"
+                    className="h-[35px] w-[220px] mb-2 text-white bg-primary hover:bg-dark-primary dark:shadow-lg font-family-poppins rounded-full text-[15px] top-[2px] pb-2  py-2 text-center  "
+                  >
+                    Añadir al carrito
                   </button>
                 </div>
               </div>

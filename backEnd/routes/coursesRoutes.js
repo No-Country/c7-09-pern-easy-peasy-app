@@ -7,11 +7,14 @@ const {
   destroy,
   showById,
 } = require('../controllers/coursesControllers')
+const { protectSession } = require('../middlewares/authMiddlewares')
+const { courseExists } = require('../middlewares/coursesMiddlewares')
 
 router.post('/courses', create)
 router.get('/courses', showAll)
-router.put('/courses/:id', update)
-router.delete('/courses/:id', destroy)
-router.get('/courses/:id', showById)
+router.get('/courses/:id', courseExists, showById)
+
+router.put('/courses/:id', protectSession, courseExists, update)
+router.delete('/courses/:id', protectSession, courseExists, destroy)
 
 module.exports = router

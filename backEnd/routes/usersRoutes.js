@@ -7,12 +7,23 @@ const {
   destroy,
   showById,
 } = require('../controllers/usersControllers')
+const {
+  protectSession,
+  protectUserAccount,
+} = require('../middlewares/authMiddlewares')
+const { userExists } = require('../middlewares/users.middlewares')
 const { createUserValidators } = require('../middlewares/validatorsMiddlewares')
-
-router.get('/users', showAll)
 router.post('/users', createUserValidators, create)
-router.put('/users/:id', update)
-router.delete('/users/:id', destroy)
-router.get('/users/:id', showById)
+router.get('/users', showAll)
+router.get('/users/:id', userExists, showById)
+
+router.put('/users/:id', userExists, protectSession, protectUserAccount, update)
+router.delete(
+  '/users/:id',
+  userExists,
+  protectSession,
+  protectUserAccount,
+  destroy
+)
 
 module.exports = router

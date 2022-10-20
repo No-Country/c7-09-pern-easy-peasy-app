@@ -122,8 +122,8 @@ const LandingPage = () => {
 
       <Welcome />
 
-      <div className="mb-4 border-b container mx-auto px-20 lg:container lg:mx-auto border-x-hoverNav dark:border-x-hoverNav p-2">
-        <ul className="flex flex-wrap flex-row -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
+      <div className="w-full mb-4 border-b  border-x-hoverNav dark:border-x-hoverNav p-2">
+        <ul className="border-blue-600 flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
           <li className="mr-10 inline-flex">
             <img
               src={cursosIcon}
@@ -131,7 +131,9 @@ const LandingPage = () => {
               className="w-65 h-4 sm:h-8"
             />
             <button
-              className="text-blue-600 rounded-t-lg border-b-2 border-blue-600 active border-x-0 border-t-0 dark:text-blue-500 dark:border-blue-500 group"
+              className={`${
+                selected === 'courses' ? 'text-hoverNav' : 'text-primary'
+              } rounded-t-lg active border-x-0 border-t-0 dark:text-blue-500 group`}
               name="courses"
               onClick={handlerClick}
             >
@@ -145,7 +147,9 @@ const LandingPage = () => {
               className="w-65 h-4 sm:h-8"
             />
             <button
-              className="text-primary rounded-t-lg border-b-2 border-primary active dark:text-primary dark:border-primary group"
+              className={`${
+                selected === 'routes' ? 'text-hoverNav' : 'text-primary'
+              } rounded-t-lg active dark:text-primary group`}
               name="routes"
               onClick={handlerClick}
             >
@@ -153,6 +157,19 @@ const LandingPage = () => {
             </button>
           </li>
         </ul>
+        <div className="flex mt-[6px]">
+          <div
+            className={`${
+              selected === 'courses' ? 'bg-hoverNav' : 'bg-primary'
+            } min-w-[110px] min-h-[4px]`}
+          ></div>
+          <div
+            className={`${
+              selected === 'routes' ? 'bg-hoverNav' : 'bg-primary'
+            } min-w-[110px] min-h-[4px]>`}
+          ></div>
+          <div className="w-full min-h-[4px] bg-primary"></div>
+        </div>
       </div>
 
       {selected === 'courses' && <Courses />}

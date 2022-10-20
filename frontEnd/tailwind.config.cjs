@@ -23,6 +23,19 @@ module.exports = {
         'register-image': 'url("./src/assets/registroIlustracion.svg")',
         'icon-close': 'url("./src/assets/iconClose.svg")',
       },
+      animation: {
+        loader: 'lds-default 1.2s linear infinite',
+      },
+      keyframes: {
+        'lds-default': {
+          '0%,20%,80%,100%': {
+            transform: 'scale(1)',
+          },
+          '50%': {
+            transform: 'scale(1.5)',
+          },
+        },
+      },
     },
   },
   plugins: [],

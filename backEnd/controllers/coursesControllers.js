@@ -4,7 +4,6 @@ const {
   allCourses,
   deletecourse,
   updateCourse,
-  showCourseById,
 } = require('../models/coursesModels')
 const { uploadImage } = require('../helpers/cloudinary')
 
@@ -79,17 +78,11 @@ exports.destroy = async (req, res) => {
 }
 
 exports.showById = async (req, res) => {
-  const { id } = req.params
-  try {
-    const user = await showCourseById(id)
-    return res.status(200).json({
-      status: 'success',
-      user,
-    })
-  } catch (e) {
-    showError(res, e)
-    console.log(e)
-  }
+  const { course } = req
+  return res.status(200).json({
+    status: 'success',
+    course,
+  })
 }
 
 exports.updateImage = async (req, res) => {

@@ -1,14 +1,13 @@
 .e644_15299 {
   width: 312px;
   height: 382px;
-  position: absolute;
 }
 .ei644_15299_10_3365 {
   width: 312px;
   height: 382px;
-  position: absolute;
+  position: relative;
   left: 0px;
-  top: 700px;
+  top: 50px;
 }
 .ei644_15299_10_3365_8_635 {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
@@ -21,6 +20,7 @@
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+
 }
 .i644_15299_10_3365_8_635 {
   border: 1px solid

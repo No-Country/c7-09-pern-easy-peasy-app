@@ -44,25 +44,51 @@ const Courses = () => {
   if (isLoading) return <Loader />
 
   return (
-    <div className="px-[20px] w-full">
+    <div className="px-[5px] w-full">
       <Ordenamiento addFilter={addFilter} />
 
-      <div className="mr-auto ml-auto w-[80%] grid grid-cols-3 gap-4 pt-8">
+      <div className="mr-auto ml-auto w-[90%] grid grid-cols-3 gap-8 pt-8">
         {coursesFilter.length === 0 ? (
           <p>There are no courses</p>
         ) : (
           coursesFilter.map((course) => (
-            <div key={course.id}>
-              <img src={course.image_url} alt={course.title} />
-              <p>{course.title}</p>
-              <p>{course.description}</p>
-              <div>
-                <span>Puntuacion: {course.puntuaction}</span>
+            <div
+              key={course.id}
+              className="px-4 rounded-[30px] overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.25)] border-top-left-radius-20"
+            >
+              <div className="w-[312px] left-0 top-0 ">
+                <div className="bg-white w-[312px] h-[216px] ">
+                  <img src={course.image_url} alt={course.title} />
+                </div>
                 <hr />
-                <span>
-                  <strong>Valor: {course.price} $</strong>
-                </span>
-                <div>Mas informacion...</div>
+                <div className="w-[280px] h-[149px]  left-4 top-[219]">
+                  <div className="w-[280px] h-[70px]  left-0 top-0">
+                    <div className="w-[280px]	h-[77px]  left:0 top:0px">
+                      <p className="w-[211px]	h-[29px]  left:0 top:0px font-family-poppins text-left text-lg tracking-normal text-sky-900">
+                        {course.title}
+                      </p>
+                      <p className="w-[280px]	h-[48px] left:0 top:29px font-family-poppins text-left text-sm tracking-normal text-black">
+                        {course.description}
+                      </p>
+                    </div>
+                  </div>
+                  <div className='flex justify-between  '> 
+                    <span className="mt-2 font-family-inter text-left text-xs text-sky-900 tracking-normal">
+                      {course.puntuaction}
+                    </span>
+                    <strong className="px-5px top-0 font-family-poppins text-right text-lg text-sky-900 tracking-normal">
+                      Valor: {course.price} $
+                    </strong>
+                </div>
+                </div>
+                <div className='flex justify-center'> 
+                    <button
+                      type="button"
+                      className="h-[35px] w-[220px] mb-2 text-white bg-primary hover:bg-dark-primary dark:shadow-lg font-family-poppins rounded-full text-[15px] top-[2px] pb-2  py-2 text-center  "
+                      >
+                      Añadir al carrito
+                  </button>
+                </div>
               </div>
             </div>
           ))

@@ -3,13 +3,24 @@ import { Link } from 'react-scroll'
 import ModalLogin from '../Modal/ModalLogin'
 import iconoWeb from '../../assets/iconoWeb.svg'
 import iconCart from '../../assets/iconCart.svg'
+import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { fetchLogin } from '../../slices/users'
 
 const Nav = () => {
   const [showModal, setShowModal] = useState(false)
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   const handlerModalLogin = (e) => {
     if (!e.target.className.includes('modal')) return
     setShowModal(!showModal)
+  }
+
+  const handlerClickLogin = (e) => {
+    dispatch(fetchLogin())
+    setShowModal(false)
+    navigate('/dashboard/your-courses')
   }
 
   return (
@@ -132,7 +143,10 @@ const Nav = () => {
                 />
                 &nbsp;&nbsp;Recordar usuario
               </label>
-              <button className="bg-primary rounded-[30px] p-[10px] text-white">
+              <button
+                onClick={handlerClickLogin}
+                className="bg-primary rounded-[30px] p-[10px] text-white"
+              >
                 INGRESAR
               </button>
               <p className="italic text-center">

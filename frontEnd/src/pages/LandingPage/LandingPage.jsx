@@ -95,12 +95,11 @@ const LandingPage = () => {
         </ModalLogin>
       )}
 
-      <div className="flex flex-wrap md:flex-nowrap justify-center text-center md:justify-start md:text-justify pl-[20px] pr-[20px] bg-background">
+      <div className="flex flex-wrap mx-20 md:flex-nowrap justify-center text-center md:justify-start md:text-justify pl-[20px] pr-[20px] bg-background">
         <div className="basis-[70%]">
           <p className="tracking-tight text-[32px] md:text-[5.5em] leading-[48px] md:leading-[95.11px] font-medium">
-            {' '}
             <span className="font-bold italic text-primary">EZ </span>la
-            plataforma que hace que aprender sea{' '}
+            plataforma que hace que aprender sea
             <span className="font-bold italic text-primary">Easy Peasy</span>
           </p>
           <div className="text-[18px] font-light leading-[38px]">

@@ -35,12 +35,12 @@ const Courses = () => {
     <div>
       <Ordenamiento addFilter={addFilter} />
       <div></div>
-      <div className="grid grid-cols-3 gap-4 pt-8"> 
+      <div className="grid grid-cols-3 gap-4 pt-8">
         {coursesFilter.length === 0 ? (
           <p>There are no courses</p>
         ) : (
           coursesFilter.map((course) => (
-            <div key={course.id} >
+            <div key={course.id}>
               <img src={course.img} alt={course.name} />
               <p>{course.name}</p>
               <p>{course.description}</p>
@@ -51,7 +51,6 @@ const Courses = () => {
             </div>
           ))
         )}
-
       </div>
     </div>
   )

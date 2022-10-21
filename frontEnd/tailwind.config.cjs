@@ -16,7 +16,7 @@ module.exports = {
         hoverNav: '#47B5FF',
       },
       backgroundImage: {
-        handcoding: 'url("./src/assets/portadaEZ.gif")',
+        handcoding: 'url("./src/assets/homeIcon.png")',
         'logotipo-ez': 'url("./src/assets/logotipoEZ.svg")',
         'logotipo-ez-footer': 'url("./src/assets/logotipoFooter.svg")',
         'login-image': 'url("./src/assets/inicioSesioIlusstracion.svg")',

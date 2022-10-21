@@ -4,7 +4,7 @@ import Routes from '../../components/NavCourses/NavCourses'
 import ModalLogin from '../../components/Modal/ModalLogin'
 import Slider from '../../components/Slider/Slider'
 import iconCurso00 from '../../assets/iconCurso00.svg'
-import icon_ruta from '../../assets/icon_ruta.svg'
+import iconRuta from '../../assets/icon_ruta.svg'
 import StudenProjects from '../../components/studentProjects/studentProjects.jsx'
 import UserStories from '../../components/userStories/UserStories.jsx'
 import Welcome from '../../components/Welcome/Welcome'
@@ -95,7 +95,7 @@ const LandingPage = () => {
         </ModalLogin>
       )}
 
-      <div className="flex flex-wrap mx-20 md:flex-nowrap justify-center text-center md:justify-start md:text-justify pl-[20px] pr-[20px] bg-background">
+      <div className="flex flex-wrap mx-20 md:flex-nowrap justify-center text-center md:justify-start md:text-justify pl-[20px] pr-[20px]">
         <div className="basis-[70%]">
           <p className="tracking-tight text-[32px] md:text-[5.5em] leading-[48px] md:leading-[95.11px] font-medium">
             <span className="font-bold italic text-primary">EZ </span>la
@@ -116,7 +116,7 @@ const LandingPage = () => {
             </button>
           </div>
         </div>
-        <div className="w-[100%] md:w-[456px] h-[456px]  rounded-[149px 136px 144px 137px] bg-handcoding bg-center bg-contain bg-no-repeat"></div>
+        <div className="w-[100%] md:w-[456px] h-[456px]  rounded-[149px 136px 144px 137px] bg-handcoding bg-center bg-contain bg-no-repeat bg-transparent"></div>
       </div>
 
       <Welcome />
@@ -141,7 +141,7 @@ const LandingPage = () => {
           </li>
           <li className="mr-2 inline-flex">
             <img
-              src={icon_ruta}
+              src={iconRuta}
               alt="Aprende a tu ritmo"
               className="w-65 h-4 sm:h-8"
             />

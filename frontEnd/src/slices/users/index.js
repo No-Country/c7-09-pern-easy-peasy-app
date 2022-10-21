@@ -14,8 +14,8 @@ export const fetchVerify = createAsyncThunk('users/fetchVerify', async () => {
 })
 
 export const fetchLogin = createAsyncThunk('users/fetchLogin', async (info) => {
-  const response = await axios.post(VITE_API_URL + 'login',{
-    ...info
+  const response = await axios.post(VITE_API_URL + 'login', {
+    ...info,
   })
   const data = response.data
   document.cookie = `token=${data.token}; max-age=${

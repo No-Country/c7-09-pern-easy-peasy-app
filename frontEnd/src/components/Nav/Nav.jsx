@@ -30,7 +30,12 @@ const Nav = () => {
     )
       return
 
-    dispatch(fetchLogin({email:loginEmail.current.value.trim(), password:loginPassword.current.value.trim()}))
+    dispatch(
+      fetchLogin({
+        email: loginEmail.current.value.trim(),
+        password: loginPassword.current.value.trim(),
+      })
+    )
     dispatch(setShowModalLogin(false))
     navigate('/dashboard/your-courses')
   }

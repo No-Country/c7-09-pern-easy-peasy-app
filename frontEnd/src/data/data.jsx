@@ -1,39 +1,39 @@
 export const dataCourses = [
   {
     id: 1,
-    name: 'Especialidad de React',
-    img: './src/assets/imgCourses/iconos_react.svg',
+    name: 'Especialidad en React JS',
+    img: './src/assets/iconos_reactAvanzado.svg',
     description:
-      '¡Aprende uno de los Frameworks más utilizados en la industria! Aprender sobre variables, funciones, objetos y arrays Enfasis en programación orientada a objetos Testing, security and deployment.',
+      'Dedicado a los que quieran actualizarse y llevar sus conocimientos un paso más alla con React.',
     numCourses: 3,
     punctuation: 4.8,
   },
   {
     id: 2,
-    name: 'Especialidad de React',
-    img: './src/assets/imgCourses/iconos_react.svg',
+    name: 'Especialidad en Angular',
+    img: './src/assets/iconos_AngularAvanzado.svg',
     description:
-      'Dedicado a los que quieran actualizarse y llevar sus conocimientos un paso más alla.',
-    numCourses: 3,
-    punctuation: 4.8,
+      'Dedicado a los que quieran actualizarse y llevar sus conocimientos un paso más alla con Angular.',
+    numCourses: 4,
+    punctuation: 4.95,
   },
   {
     id: 3,
-    name: 'Especialidad de React',
-    img: './src/assets/imgCourses/iconos_react.svg',
+    name: 'Especialidad en Diseño',
+    img: './src/assets/iconos_product desing.svg',
     description:
-      'Dedicado a los que quieran actualizarse y llevar sus conocimientos un paso más alla.',
-    numCourses: 3,
-    punctuation: 4.8,
+      'Aprende todo el espectro del diseño,aplica en end-to-end del diseño, desde la investigación hasta el prototipo de alta fidelidad',
+    numCourses: 2,
+    punctuation: 4.82,
   },
   {
     id: 4,
-    name: 'Especialidad de React',
-    img: './src/assets/imgCourses/iconos_react.svg',
+    name: 'Especialidad en Data Science',
+    img: './src/assets/iconos_sql.svg',
     description:
-      'Dedicado a los que quieran actualizarse y llevar sus conocimientos un paso más alla.',
+      'Obtenga conocimientos completos, aprenda a combinar las tres herramientas más importantes en la ciencia de datos',
     numCourses: 3,
-    punctuation: 4.8,
+    punctuation: 4.98,
   },
 ]
 

@@ -23,7 +23,7 @@ export const Ordenamiento = ({ addFilter }) => {
             value={select.courses}
             name=""
             id="select-order"
-            className="bg-white absolute h-10 hover:bg-gray-100 w-1/6 element sm:w-3/4 md:w-20 lg:w-2 xl:w-1/4 text-black font-bold-light text-lg- italic py-2 px-10 pb-2 shadow-md border border-gray-300 rounded-full"
+            className="bg-white absolute h-10 hover:bg-gray-100 w-1/6 element sm:w-20 md:w-20 lg:w-2 xl:w-1/4 text-black font-bold-light text-lg- italic py-2 px-10 pb-2 shadow-md border border-gray-300 rounded-full"
           >
             <option value="default">Seleccione una opción</option>
             <option value="punctuation">Puntuacion</option>

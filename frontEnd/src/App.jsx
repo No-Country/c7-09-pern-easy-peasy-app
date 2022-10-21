@@ -10,9 +10,9 @@ import { getCookie } from './helpers/cookies'
 function App() {
   const dispatch = useDispatch()
 
-  useEffect(() => {
-    if (getCookie('token')) dispatch(fetchVerify())
-  }, [])
+  // useEffect(() => {
+  //   if (getCookie('token')) dispatch(fetchVerify())
+  // }, [])
 
   return (
     <LayoutApp>

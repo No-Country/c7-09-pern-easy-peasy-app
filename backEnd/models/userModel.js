@@ -89,7 +89,7 @@ const deleteUser = async (id) => {
 
 const getUserByEmail = async (email) => {
   const SQLquery = {
-    text: `SELECT id, firstname, lastname, email, password, createdate, updatedate FROM client WHERE email = $1`,
+    text: `SELECT id, firstname, lastname, email, password, image_url, createdate, updatedate FROM client WHERE email = $1`,
     values: [email],
   }
   try {

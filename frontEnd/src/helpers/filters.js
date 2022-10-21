@@ -7,12 +7,7 @@ export function filterByPrice(data, ordering) {
 }
 
 export function filterByPunctuation(data) {
-  console.log(
-    data.sort((a, b) => parseFloat(b.puntuaction) - parseFloat(a.puntuaction))
-  )
-  return data.sort(
-    (a, b) => parseFloat(b.puntuaction) - parseFloat(a.puntuaction)
-  )
+  return data.sort((a, b) => parseFloat(b.puntuaction) - parseFloat(a.puntuaction))
 }
 
 export function filterByDate(data, type) {
@@ -21,4 +16,8 @@ export function filterByDate(data, type) {
       ? new Date(b.createdate).getTime() - new Date(a.createdate).getTime()
       : new Date(b.updatedate).getTime() - new Date(a.updatedate).getTime()
   })
+}
+
+export function filterByLevel(data, value){
+  return data.filter(a => a.level.toLowerCase().includes(value))
 }

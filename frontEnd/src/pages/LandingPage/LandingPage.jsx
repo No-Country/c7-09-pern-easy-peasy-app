@@ -4,7 +4,7 @@ import Routes from '../../components/NavCourses/NavCourses'
 import ModalLogin from '../../components/Modal/ModalLogin'
 import Slider from '../../components/Slider/Slider'
 import iconCurso00 from '../../assets/iconCurso00.svg'
-import icon_ruta from '../../assets/icon_ruta.svg'
+import iconRuta from '../../assets/icon_ruta.svg'
 import StudenProjects from '../../components/studentProjects/studentProjects.jsx'
 import UserStories from '../../components/userStories/UserStories.jsx'
 import Welcome from '../../components/Welcome/Welcome'
@@ -27,7 +27,7 @@ const LandingPage = () => {
   }
 
   return (
-    <>
+    <div className="bg-background">
       {showModal && (
         <ModalLogin handlerModalLogin={handlerModalLogin}>
           <div className="relative w-4/5 gap-2.5 flex md:flex-nowrap md:justify-start flex-wrap justify-center z-40 bg-gray-1 h-[95%] overflow-auto p-[10px] rounded-[20px]">
@@ -105,7 +105,7 @@ const LandingPage = () => {
         </ModalLogin>
       )}
 
-      <div className="flex flex-wrap mx-20 md:flex-nowrap justify-center text-center md:justify-start md:text-justify pl-[20px] pr-[20px] bg-background">
+      <div className="flex flex-wrap mx-20 md:flex-nowrap justify-center text-center md:justify-start md:text-justify pl-[20px] pr-[20px]">
         <div className="basis-[70%]">
           <p className="tracking-tight text-[32px] md:text-[5.5em] leading-[48px] md:leading-[95.11px] font-medium">
             <span className="font-bold italic text-primary">EZ </span>la
@@ -126,7 +126,7 @@ const LandingPage = () => {
             </button>
           </div>
         </div>
-        <div className="w-[100%] md:w-[456px] h-[456px]  rounded-[149px 136px 144px 137px] bg-handcoding bg-center bg-contain bg-no-repeat"></div>
+        <div className="w-[100%] md:w-[456px] h-[456px]  rounded-[149px 136px 144px 137px] bg-handcoding bg-center bg-contain bg-no-repeat bg-transparent"></div>
       </div>
 
       <Welcome />
@@ -142,7 +142,7 @@ const LandingPage = () => {
             <button
               className={`${
                 selected === 'courses' ? 'text-hoverNav' : 'text-primary'
-              } rounded-t-lg active border-x-0 border-t-0 dark:text-blue-500 group`}
+              } rounded-t-lg active border-x-0 border-t-0`}
               name="courses"
               onClick={handlerClick}
             >
@@ -151,14 +151,14 @@ const LandingPage = () => {
           </li>
           <li className="mr-2 inline-flex">
             <img
-              src={icon_ruta}
+              src={iconRuta}
               alt="Aprende a tu ritmo"
               className="w-65 h-4 sm:h-8"
             />
             <button
               className={`${
                 selected === 'routes' ? 'text-hoverNav' : 'text-primary'
-              } rounded-t-lg active dark:text-primary group`}
+              } rounded-t-lg active`}
               name="routes"
               onClick={handlerClick}
             >
@@ -182,13 +182,9 @@ const LandingPage = () => {
       </div>
 
       <div className="flex">
-        <div className="place-content-end">
-          <Categories />
-        </div>
-        <div>
-          {selected === 'courses' && <Courses />}
-          {selected === 'routes' && <Routes />}
-        </div>
+
+        {selected === 'courses' && <Courses />}
+        {selected === 'routes' && <Routes />}
       </div>
 
       <Aspirations />
@@ -214,7 +210,7 @@ const LandingPage = () => {
           <StudenProjects />
         </Slider>
       </div>
-    </>
+    </div>
   )
 }
 

@@ -2,12 +2,14 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const { showError } = require('../helpers')
 const { getUserByEmail } = require('../models/userModel')
+const { showInformation } = require('../models/loginModels')
 
 exports.login = async (req, res) => {
   const { email, password } = req.body
 
   try {
     const user = await getUserByEmail(email)
+    const result = await showInformation(user[0].id)
     if (user[0] === undefined) {
       res.status(404).json({
         message: 'Correo no registrado',
@@ -31,11 +33,13 @@ exports.login = async (req, res) => {
             expiresIn: '24h',
           }
         )
-
+        user[0].password = undefined
         return res.status(200).json({
           message: 'Usuario autenticado con exito',
           token,
           code: 200,
+          user: user[0],
+          courses: result,
         })
       }
     }

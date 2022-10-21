@@ -8,7 +8,7 @@ import store from './store'
 function App() {
   return (
     <Provider store={store}>
-      <LayoutApp >
+      <LayoutApp>
         <RoutesApp />
       </LayoutApp>
     </Provider>

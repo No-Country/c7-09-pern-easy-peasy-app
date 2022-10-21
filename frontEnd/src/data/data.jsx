@@ -1,11 +1,10 @@
-
 export const dataCourses = [
   {
     id: 1,
     name: 'Especialidad en React JS',
     img: './src/assets/imgCourses/iconos_reactAvanzado.svg',
     description:
-    'Dedicado a los que quieran actualizarse y llevar sus conocimientos un paso más alla con React.',
+      'Dedicado a los que quieran actualizarse y llevar sus conocimientos un paso más alla con React.',
     numCourses: 3,
     punctuation: 4.8,
   },

@@ -27,7 +27,7 @@ const LandingPage = () => {
   }
 
   return (
-    <div className='bg-background'>
+    <div className="bg-background">
       {showModal && (
         <ModalLogin handlerModalLogin={handlerModalLogin}>
           <div className="relative w-4/5 gap-2.5 flex md:flex-nowrap md:justify-start flex-wrap justify-center z-40 bg-gray-1 h-[95%] overflow-auto p-[10px] rounded-[20px]">
@@ -172,10 +172,10 @@ const LandingPage = () => {
       </div>
 
       <div className="flex">
-          {selected === 'courses' &&  <Categories />}
+        {selected === 'courses' && <Categories />}
 
-          {selected === 'courses' && <Courses />}
-          {selected === 'routes' && <Routes />}
+        {selected === 'courses' && <Courses />}
+        {selected === 'routes' && <Routes />}
       </div>
 
       <Aspirations />

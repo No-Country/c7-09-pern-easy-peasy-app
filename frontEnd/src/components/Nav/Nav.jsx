@@ -22,7 +22,7 @@ const Nav = () => {
     dispatch(setShowModalLogin(!showModalLogin))
   }
 
-  const handlerClickLogin = async (e) => {
+  const handlerClickLogin = (e) => {
     e.preventDefault()
     if (
       loginEmail.current.value.trim() === '' ||
@@ -30,7 +30,7 @@ const Nav = () => {
     )
       return
 
-    dispatch(fetchLogin())
+    dispatch(fetchLogin({email:loginEmail.current.value.trim(), password:loginPassword.current.value.trim()}))
     dispatch(setShowModalLogin(false))
     navigate('/dashboard/your-courses')
   }

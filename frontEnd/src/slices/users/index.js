@@ -13,13 +13,15 @@ export const fetchVerify = createAsyncThunk('users/fetchVerify', async () => {
   return data
 })
 
-export const fetchLogin = createAsyncThunk('users/fetchLogin', async () => {
-  const response = await axios.get(VITE_API_URL + 'users')
-  const data = await response.data
+export const fetchLogin = createAsyncThunk('users/fetchLogin', async (info) => {
+  const response = await axios.post(VITE_API_URL + 'login',{
+    ...info
+  })
+  const data = response.data
   document.cookie = `token=${data.token}; max-age=${
     60 * 30
   }; path=/; samesite=strict`
-  console.log('qq', document.cookie)
+  console.log(data)
   return data
 })
 

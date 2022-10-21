@@ -2,7 +2,7 @@ export const dataCourses = [
   {
     id: 1,
     name: 'Especialidad en React JS',
-    img: './src/assets/imgCourses/iconos_reactAvanzado.svg',
+    img: './src/assets/iconos_reactAvanzado.svg',
     description:
       'Dedicado a los que quieran actualizarse y llevar sus conocimientos un paso más alla con React.',
     numCourses: 3,
@@ -11,7 +11,7 @@ export const dataCourses = [
   {
     id: 2,
     name: 'Especialidad en Angular',
-    img: './src/assets/imgCourses/iconos_AngularAvanzado.svg',
+    img: './src/assets/iconos_AngularAvanzado.svg',
     description:
       'Dedicado a los que quieran actualizarse y llevar sus conocimientos un paso más alla con Angular.',
     numCourses: 4,
@@ -20,7 +20,7 @@ export const dataCourses = [
   {
     id: 3,
     name: 'Especialidad en Diseño',
-    img: './src/assets/imgCourses/iconos_product desing.svg',
+    img: './src/assets/iconos_product desing.svg',
     description:
       'Aprende todo el espectro del diseño,aplica en end-to-end del diseño, desde la investigación hasta el prototipo de alta fidelidad',
     numCourses: 2,
@@ -29,7 +29,7 @@ export const dataCourses = [
   {
     id: 4,
     name: 'Especialidad en Data Science',
-    img: './src/assets/imgCourses/iconos_sql.svg',
+    img: './src/assets/iconos_sql.svg',
     description:
       'Obtenga conocimientos completos, aprenda a combinar las tres herramientas más importantes en la ciencia de datos',
     numCourses: 3,

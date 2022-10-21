@@ -3,13 +3,16 @@ import Ordenamiento from './ordenamiento'
 import { useEffect, useState } from 'react'
 import {
   filterByDate,
+  filterByLevel,
   filterByPrice,
   filterByPunctuation,
 } from '../../helpers/filters'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchAllCourses } from '../../slices/courses'
 import Loader from '../Loader/Loader'
-import DataPopover from './dataPopover'
+import Categories from '../Categories/categories'
+
+
 
 const Courses = () => {
   const dispatch = useDispatch()
@@ -17,9 +20,11 @@ const Courses = () => {
   const [querys, addFilter] = useFilters()
   const [coursesFilter, setCoursesFilter] = useState(courses)
 
+
   useEffect(() => {
     dispatch(fetchAllCourses())
   }, [])
+
 
   useEffect(() => {
     let newF = [...courses]
@@ -34,6 +39,17 @@ const Courses = () => {
         newF = filterByDate(newF, 'create')
       } else if (querys.combinados[v] === 'updatedate') {
         newF = filterByDate(newF, 'update')
+      } else if (querys.combinados[v] === 'updatedate') {
+        newF = filterByDate(newF, 'update')
+      }
+      if (querys.combinados[v] === 'principiante'){
+        newF = filterByLevel(newF, 'principiante')
+      }
+      if (querys.combinados[v] === 'intermedio'){
+        newF = filterByLevel(newF, 'intermedio')
+      }
+      if (querys.combinados[v] === 'avanzado'){
+        newF = filterByLevel(newF, 'avanzado')
       }
     }
 
@@ -45,6 +61,9 @@ const Courses = () => {
   return (
     <div className="px-[5px] w-full">
       <Ordenamiento addFilter={addFilter} />
+    
+    <div className="flex"> 
+      <Categories addFilter={addFilter} /> 
 
       <div className="mr-auto ml-auto w-[97%] flex flex-wrap gap-8 pt-8">
         {coursesFilter.length === 0 ? (
@@ -88,6 +107,7 @@ const Courses = () => {
             </div>
           ))
         )}
+      </div>
       </div>
     </div>
   )

@@ -172,7 +172,6 @@ const LandingPage = () => {
       </div>
 
       <div className="flex">
-        {selected === 'courses' && <Categories />}
 
         {selected === 'courses' && <Courses />}
         {selected === 'routes' && <Routes />}

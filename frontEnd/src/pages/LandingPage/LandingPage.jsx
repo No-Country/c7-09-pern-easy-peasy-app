@@ -41,6 +41,16 @@ const LandingPage = () => {
                 COMUNIDAD
               </p>
               <input
+                type="text"
+                className="italic w-full p-[8px] rounded-[10px] border border-blue-1 outline-none border-solid"
+                placeholder="Nombre(s)"
+              />
+              <input
+                type="text"
+                className="italic w-full p-[8px] rounded-[10px] border border-blue-1 outline-none border-solid"
+                placeholder="Apellido(s)"
+              />
+              <input
                 type="email"
                 className="italic w-full p-[8px] rounded-[10px] border border-blue-1 outline-none border-solid"
                 placeholder="Correo electronico"

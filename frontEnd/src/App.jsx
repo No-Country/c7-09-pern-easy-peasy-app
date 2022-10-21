@@ -2,16 +2,22 @@ import { LayoutApp } from './layouts/LayoutApp'
 import { RoutesApp } from './routes/RoutesApp'
 
 // redux
-import { Provider } from 'react-redux'
-import store from './store'
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { fetchVerify } from './slices/users'
+import { getCookie } from './helpers/cookies'
 
 function App() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    if (getCookie('token')) dispatch(fetchVerify())
+  }, [])
+
   return (
-    <Provider store={store}>
-      <LayoutApp>
-        <RoutesApp />
-      </LayoutApp>
-    </Provider>
+    <LayoutApp>
+      <RoutesApp />
+    </LayoutApp>
   )
 }
 

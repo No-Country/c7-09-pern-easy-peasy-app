@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Link } from 'react-scroll'
 import ModalLogin from '../Modal/ModalLogin'
 import iconoWeb from '../../assets/iconoWeb.svg'
@@ -6,20 +5,33 @@ import iconCart from '../../assets/iconCart.svg'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { fetchLogin } from '../../slices/users'
+import { useSelector } from 'react-redux'
+import Loader from '../Loader/Loader'
+import { setShowModalLogin } from '../../slices/modals'
+import { useRef, useState } from 'react'
 
 const Nav = () => {
-  const [showModal, setShowModal] = useState(false)
+  const { showModalLogin } = useSelector((state) => state.modals)
   const navigate = useNavigate()
   const dispatch = useDispatch()
+  const loginEmail = useRef()
+  const loginPassword = useRef()
 
   const handlerModalLogin = (e) => {
     if (!e.target.className.includes('modal')) return
-    setShowModal(!showModal)
+    dispatch(setShowModalLogin(!showModalLogin))
   }
 
-  const handlerClickLogin = (e) => {
+  const handlerClickLogin = async (e) => {
+    e.preventDefault()
+    if (
+      loginEmail.current.value.trim() === '' ||
+      loginPassword.current.value.trim() === ''
+    )
+      return
+
     dispatch(fetchLogin())
-    setShowModal(false)
+    dispatch(setShowModalLogin(false))
     navigate('/dashboard/your-courses')
   }
 
@@ -103,7 +115,7 @@ const Nav = () => {
         </div>
       </div>
 
-      {showModal && (
+      {showModalLogin && (
         <ModalLogin handlerModalLogin={handlerModalLogin}>
           <div className="relative w-4/5 gap-2.5 flex md:flex-nowrap md:justify-start flex-wrap justify-center z-40 bg-gray-1 h-[95%] overflow-auto p-[10px] rounded-[20px]">
             <div className="basis-[100%] h-[100%] md:basis-1/2 flex justify-center items-center">
@@ -115,12 +127,14 @@ const Nav = () => {
                 INGRESA PARA SEGUIR APRENDIENDO
               </p>
               <input
+                ref={loginEmail}
                 type="email"
                 className="italic w-full p-[8px] rounded-[10px] border border-blue-1 outline-none border-solid"
                 placeholder="Correo electronico"
               />
               <div>
                 <input
+                  ref={loginPassword}
                   type="password"
                   className="italic w-full p-[8px] rounded-[10px] border border-blue-1 outline-none border-solid"
                   name=""

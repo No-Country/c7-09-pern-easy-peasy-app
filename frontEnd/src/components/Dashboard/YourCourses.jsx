@@ -1,24 +1,21 @@
-import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
-import { fetchYourCourses } from '../../slices/users'
+import Loader from '../Loader/Loader'
 
 const YourCourses = () => {
-  const dispatch = useDispatch()
-  const { user, courses } = useSelector((state) => state.users)
+  const { user, courses, isLoading } = useSelector((state) => state.users)
 
-  useEffect(() => {
-    dispatch(fetchYourCourses())
-  }, [])
+  if (isLoading) return <Loader />
 
+  console.log(courses, user)
   return (
     <div className="w-full min-h-screen p-[20px]">
-      <h1 className="mb-[20px] text-[28px] font-normal">
+      <h1 className="mb-[20px] text-[16px] sm:text-[28px] font-light sm:font-normal">
         Hola <span className="text-primary font-bold">{user?.firstname}</span>,
         continua aprendiendo
       </h1>
-      <div className="flex justify-between">
-        <div className="basis-[70%]">
+      <div className="flex flex-wrap justify-between">
+        <div className="basis-full sm:basis-[70%]">
           {courses.map((course) => (
             <div
               key={course.id}
@@ -55,8 +52,8 @@ const YourCourses = () => {
             </div>
           ))}
         </div>
-        <div className="basis-[28%] text-[14px] p-[10px] rounded-[20px] shadow-[0px_4px_6px_rgba(0,0,0,0.25)]">
-          <h2 className="pt-[10px] pb-[10px] text-[16px] font-medium">
+        <div className="basis-full sm:basis-[28%] text-[14px] p-[10px] rounded-[20px] shadow-[0px_4px_6px_rgba(0,0,0,0.25)]">
+          <h2 className="pt-[10px] pb-[10px] text-[16px] font-normal sm:font-medium">
             Lecturas que te pueden interesar
           </h2>
           <div className="flex flex-col gap-y-2">

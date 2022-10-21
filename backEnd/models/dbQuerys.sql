@@ -12,15 +12,36 @@ CREATE DATABASE easypeasy;
   updatedate TIMESTAMP NOT NULL
 );
 
-CREATE TABLE user_course (
+CREATE TABLE client_course (
   id SERIAL PRIMARY KEY,
   client_id INT NOT NULL,
   course_id INT NOT NULL,
-  createdate TIMESTAMP NOT NULL,
-  updatedate TIMESTAMP NOT NULL,
+  createdate TIMESTAMP NOT NULL DEFAULT 'now()',
+  updatedate TIMESTAMP NOT NULL DEFAULT 'now()',
   FOREIGN KEY (client_id) REFERENCES client(id),
   FOREIGN KEY (course_id) REFERENCES course(id)
 );
+
+SELECT
+  client.id,
+  client.firstname,
+  client.lastname,
+  client.email,
+  client.image_url,
+  client.createdate,
+  client.updatedate,
+  course.id,
+  course.title,
+  course.description,
+  course.image_url,
+  course.createdate,
+  course.updatedate
+FROM
+  client_course AS cc
+  INNER JOIN  client ON cc.client_id = client.id
+  INNER JOIN course ON cc.course_id = course.id
+WHERE client.id = 5;
+
 
 CREATE TABLE course (
   id SERIAL NOT NULL PRIMARY KEY,

@@ -15,10 +15,10 @@ const Nav = () => {
   return (
     <div className="flex justify-between flex-wrap space-x-20  items-center shadow-md bg-white p-3">
       <img src={iconoWeb} className="h-8 w-65 mr-2 sm:h-12" alt="EZ Logo" />
-      <div class="block lg:hidden">
-        <button class="flex items-center px-3 py-2 border rounded text-hoverNav border-hoverNav hover:text-primary hover:border-primary">
+      <div className="block lg:hidden">
+        <button className="flex items-center px-3 py-2 border rounded text-hoverNav border-hoverNav hover:text-primary hover:border-primary">
           <svg
-            class="fill-current h-3 w-3"
+            className="fill-current h-3 w-3"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -27,8 +27,8 @@ const Nav = () => {
           </svg>
         </button>
       </div>
-      <div class="block flex-grow text-md lg:flex lg:items-center lg:w-auto">
-        <div class="lg:flex-grow">
+      <div className="block flex-grow text-md lg:flex lg:items-center lg:w-auto">
+        <div className="lg:flex-grow">
           <Link
             to="projetcs"
             href="#responsive-header"

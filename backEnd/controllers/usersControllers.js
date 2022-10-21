@@ -25,9 +25,11 @@ exports.create = async (req, res) => {
     await newUser(payload)
     await sendEmail(email, completeName)
 
+    payload.password = undefined
     res.status(200).json({
       message: 'Usuario creado con exito',
       code: 201,
+      payload,
     })
   } catch (e) {
     showError(res, e)

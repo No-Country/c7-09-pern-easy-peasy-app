@@ -54,9 +54,9 @@ const Courses = () => {
           coursesFilter.map((course) => (
             <div
               key={course.id}
-              className="px-4 min-w-[300px] max-w-[300px] flex flex-col rounded-[30px] shadow-[0_4px_10px_rgba(0,0,0,0.25)] border-top-left-radius-20"
+              className="px-4 min-w-[300px] max-w-[300px] flex flex-col rounded-[30px] shadow-[0_4px_10px_rgba(0,0,0,0.25)] border-top-left-radius-20 bg-gray-100"
             >
-              <div className="basis-full bg-white max-w-[280px] max-h-[216px] min-h-[216px] ">
+              <div className="basis-full max-w-[280px] max-h-[216px] min-h-[216px] ">
                 <img src={course.image_url} alt={course.title} />
               </div>
               <div className="basis-full flex flex-col">

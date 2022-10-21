@@ -10,7 +10,7 @@ import UserStories from '../../components/userStories/UserStories.jsx'
 import Welcome from '../../components/Welcome/Welcome'
 import Aspirations from '../../components/aspirations/aspirations'
 import Ceo from '../../components/CEO/ceo'
-import Categories from '../../components/Categories/categories'
+
 // css
 
 const LandingPage = () => {

@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux'
-import { useDispatch } from 'react-redux'
 import Loader from '../Loader/Loader'
 
 const YourCourses = () => {
@@ -23,7 +22,7 @@ const YourCourses = () => {
             >
               <img
                 className="w-[206px] h-[160px]"
-                src={course.image}
+                src={course.image_url}
                 alt={course.title}
               />
               <div className="w-full min-h-full flex flex-col justify-between">

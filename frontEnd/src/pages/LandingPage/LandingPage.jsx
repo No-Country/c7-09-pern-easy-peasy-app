@@ -27,7 +27,7 @@ const LandingPage = () => {
   }
 
   return (
-    <>
+    <div className='bg-background'>
       {showModal && (
         <ModalLogin handlerModalLogin={handlerModalLogin}>
           <div className="relative w-4/5 gap-2.5 flex md:flex-nowrap md:justify-start flex-wrap justify-center z-40 bg-gray-1 h-[95%] overflow-auto p-[10px] rounded-[20px]">
@@ -132,7 +132,7 @@ const LandingPage = () => {
             <button
               className={`${
                 selected === 'courses' ? 'text-hoverNav' : 'text-primary'
-              } rounded-t-lg active border-x-0 border-t-0 dark:text-blue-500 group`}
+              } rounded-t-lg active border-x-0 border-t-0`}
               name="courses"
               onClick={handlerClick}
             >
@@ -148,7 +148,7 @@ const LandingPage = () => {
             <button
               className={`${
                 selected === 'routes' ? 'text-hoverNav' : 'text-primary'
-              } rounded-t-lg active dark:text-primary group`}
+              } rounded-t-lg active`}
               name="routes"
               onClick={handlerClick}
             >
@@ -172,13 +172,10 @@ const LandingPage = () => {
       </div>
 
       <div className="flex">
-        <div className="place-content-end">
-          <Categories />
-        </div>
-        <div>
+          {selected === 'courses' &&  <Categories />}
+
           {selected === 'courses' && <Courses />}
           {selected === 'routes' && <Routes />}
-        </div>
       </div>
 
       <Aspirations />
@@ -204,7 +201,7 @@ const LandingPage = () => {
           <StudenProjects />
         </Slider>
       </div>
-    </>
+    </div>
   )
 }
 

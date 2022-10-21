@@ -12,6 +12,14 @@ export const fetchAllCourses = createAsyncThunk(
   }
 )
 
+export const fetchAllRoutes = createAsyncThunk(
+  'NavCourses/fetchAllRoutes',
+  async () => {
+    const response = await axios.get(VITE_API_URL + 'routes')
+    return response.data
+  }
+)
+
 export const coursesSlice = createSlice({
   name: 'courses',
   initialState: {
